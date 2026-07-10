@@ -1,0 +1,281 @@
+{
+  "title": "Validation report for nl.geonovum.dssc.odrl.location-privacy.patterns.ldp1-within-geofence - LDP1 Within Geofence Transfer Duty",
+  "bblockName": "LDP1 Within Geofence Transfer Duty",
+  "bblockId": "nl.geonovum.dssc.odrl.location-privacy.patterns.ldp1-within-geofence",
+  "generated": "2026-07-10T12:32:54.705911+00:00",
+  "result": false,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/patterns/ldp1-within-geofence/tests/example.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp1-within-geofence/tests/example.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/patterns/ldp1-within-geofence/tests/invalid-location-policy-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp1-within-geofence/tests/invalid-location-policy-fail.json",
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": true,
+              "message": "Test was expected to fail but it did not."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-location-policy-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/patterns/ldp1-within-geofence/tests/example.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp1-within-geofence/tests/example.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/patterns/ldp1-within-geofence/tests/invalid-location-policy-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp1-within-geofence/tests/invalid-location-policy-fail.json",
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": true,
+              "message": "Test was expected to fail but it did not."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-location-policy-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/example_1_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/example.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/example_2_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/edc-example.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/example_3_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/example_3_1.json",
+        "exampleIndex": 3,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/lpp-example.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 7,
+    "passed": 5,
+    "failed": 2
+  }
+}

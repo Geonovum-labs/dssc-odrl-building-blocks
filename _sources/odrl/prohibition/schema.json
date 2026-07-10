@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/prohibition/schema.json",
+  "title": "ODRL Prohibition Rule",
+  "type": "object",
+  "required": [
+    "action"
+  ],
+  "properties": {
+    "@id": {
+      "type": "string"
+    },
+    "target": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "action": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "required": [
+            "@id"
+          ],
+          "properties": {
+            "@id": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "constraint": {
+      "oneOf": [
+        {
+          "oneOf": [
+            {
+              "$ref": "../constraint-atomic/schema.json"
+            },
+            {
+              "$ref": "../constraint-logical/schema.json"
+            }
+          ]
+        },
+        {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "../constraint-atomic/schema.json"
+              },
+              {
+                "$ref": "../constraint-logical/schema.json"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "duty": {
+      "oneOf": [
+        {
+          "$ref": "../obligation/schema.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "../obligation/schema.json"
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

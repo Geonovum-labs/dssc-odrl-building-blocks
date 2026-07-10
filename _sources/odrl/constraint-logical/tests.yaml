@@ -1,0 +1,5 @@
+- ref: tests/purpose-and-role.json
+- ref: tests/empty-and-fail.json
+  require-fail: true
+- ref: tests/no-logical-operator-fail.json
+  require-fail: true

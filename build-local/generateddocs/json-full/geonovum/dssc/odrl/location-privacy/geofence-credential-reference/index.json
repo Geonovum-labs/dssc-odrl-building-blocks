@@ -1,0 +1,76 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.location-privacy.geofence-credential-reference",
+  "name": "Participant Geofence Credential Reference",
+  "abstract": "A Verifiable Credential subject shape that references a participant geofence by resolvable URL and SHA-256 hash.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [],
+  "tags": [
+    "location privacy",
+    "geofence",
+    "Verifiable Credential",
+    "DSSC"
+  ],
+  "sources": [
+    {
+      "title": "Using Sensitive Location Data to its Full Potential - wetransform",
+      "link": "https://wetransform.to/news-and-events/sensitive-location-data-full-potential/"
+    },
+    {
+      "title": "ODRL Information Model 2.2",
+      "link": "https://www.w3.org/TR/odrl-model/"
+    },
+    {
+      "title": "ODRL V2.2 Implementation Best Practices",
+      "link": "https://w3c.github.io/odrl/bp/"
+    },
+    {
+      "title": "SAGE WP2 Meeting - Location Data Policies in the EDC",
+      "link": "urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/tests/geofence-credential-subject.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/tests/missing-hash-fail.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/tests/bad-hash-fail.json"
+    }
+  ],
+  "validationPassed": false,
+  "examples": [
+    {
+      "title": "Geofence credential subject",
+      "description": "Credential subject containing a geofence URL and SHA-256 hash.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/examples/geofence-credential-subject.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/example_1_1.json",
+          "sizeBytes": 261,
+          "code": "{\n  \"credentialSubject\": {\n    \"id\": \"did:geofence:example-participant-area\",\n    \"geofence\": {\n      \"URL\": \"https://example.org/geofences/participant-area.geojson\",\n      \"hash\": \"4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899\"\n    }\n  }\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/location-privacy/geofence-credential-reference/schema.json\ntitle: Participant Geofence Credential Reference\ntype: object\nrequired:\n- credentialSubject\nproperties:\n  credentialSubject:\n    type: object\n    required:\n    - id\n    - geofence\n    properties:\n      id:\n        type: string\n      geofence:\n        type: object\n        required:\n        - URL\n        - hash\n        properties:\n          URL:\n            type: string\n            format: uri\n          hash:\n            type: string\n            pattern: ^[A-Fa-f0-9]{64}$\n        additionalProperties: true\n    additionalProperties: true\nadditionalProperties: true\n"
+}

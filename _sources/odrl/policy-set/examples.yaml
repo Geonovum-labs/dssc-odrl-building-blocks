@@ -1,0 +1,8 @@
+examples:
+  - title: ODRL Policy Set for Dataspace Protocol
+    description: >
+      A constrained ODRL Set profile for policies exchanged through the Dataspace
+      Protocol.
+    snippets:
+      - language: json
+        ref: examples/simple.json

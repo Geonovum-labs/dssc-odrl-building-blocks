@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/location-privacy/patterns/ldp1-within-geofence/schema.json",
+  "title": "LDP1 Within Geofence Transfer Duty",
+  "$ref": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.json"
+}

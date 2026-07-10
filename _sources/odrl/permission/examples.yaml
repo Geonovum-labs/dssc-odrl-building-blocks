@@ -1,0 +1,8 @@
+examples:
+  - title: ODRL Permission Rule
+    description: >
+      A permission rule allowing an action under optional constraints and/or
+      duties.
+    snippets:
+      - language: json
+        ref: examples/simple.json

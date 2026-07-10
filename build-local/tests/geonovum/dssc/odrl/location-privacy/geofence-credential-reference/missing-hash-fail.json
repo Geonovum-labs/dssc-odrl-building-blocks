@@ -1,0 +1,8 @@
+{
+  "credentialSubject": {
+    "id": "did:geofence:example",
+    "geofence": {
+      "URL": "https://example.org/geofence.geojson"
+    }
+  }
+}

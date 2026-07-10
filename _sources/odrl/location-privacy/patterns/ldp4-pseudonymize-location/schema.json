@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/location-privacy/patterns/ldp4-pseudonymize-location/schema.json",
+  "title": "LDP4 Pseudonymize Spatial Reference",
+  "$ref": "../../../policy-set/schema.json"
+}

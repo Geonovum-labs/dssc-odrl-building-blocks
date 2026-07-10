@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.location-privacy.action-within-geofence",
+  "name": "Location Privacy Within Geofence Action",
+  "abstract": "Action indicating that transferred spatial data must be filtered or clipped to the consumer participant geofence.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.action-use"
+  ],
+  "tags": [
+    "ODRL",
+    "location privacy",
+    "action",
+    "lp:withinGeofence"
+  ],
+  "sources": [
+    {
+      "title": "Using Sensitive Location Data to its Full Potential - wetransform",
+      "link": "https://wetransform.to/news-and-events/sensitive-location-data-full-potential/"
+    },
+    {
+      "title": "ODRL Information Model 2.2",
+      "link": "https://www.w3.org/TR/odrl-model/"
+    },
+    {
+      "title": "ODRL V2.2 Implementation Best Practices",
+      "link": "https://w3c.github.io/odrl/bp/"
+    },
+    {
+      "title": "SAGE WP2 Meeting - Location Data Policies in the EDC",
+      "link": "urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-within-geofence/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-within-geofence/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/location-privacy/action-within-geofence/schema.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/location-privacy/action-within-geofence/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/action-within-geofence/tests/action.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/action-within-geofence/tests/wrong-action-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Location Privacy Within Geofence Action",
+      "description": "Action indicating that transferred spatial data must be filtered or clipped to the consumer participant geofence.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/action-within-geofence/examples/action.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/action-within-geofence/example_1_1.json",
+          "sizeBytes": 20,
+          "code": "\"lp:withinGeofence\"\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/location-privacy/action-within-geofence/schema.json\ntitle: Location Privacy Within Geofence Action\noneOf:\n- const: lp:withinGeofence\n- type: object\n  required:\n  - '@id'\n  properties:\n    '@id':\n      const: lp:withinGeofence\n  additionalProperties: true\n"
+}

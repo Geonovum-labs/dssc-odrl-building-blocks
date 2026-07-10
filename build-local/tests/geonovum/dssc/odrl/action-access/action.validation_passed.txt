@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.action-access - Dataspace Access Action
+Generated 2026-07-10T12:32:54.231011+00:00
+=== Files ===
+Using action.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

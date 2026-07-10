@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/odrl.jsonld",
+    {
+      "ex": "https://example.org/policy/"
+    }
+  ],
+  "@type": "Set",
+  "permission": [
+    {
+      "action": "use",
+      "constraint": {
+        "leftOperand": "ex:hasCredentialType",
+        "operator": "eq",
+        "rightOperand": "ex:TrustedParticipantCredential"
+      }
+    }
+  ]
+}

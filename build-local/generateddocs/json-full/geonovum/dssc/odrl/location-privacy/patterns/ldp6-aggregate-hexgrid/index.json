@@ -1,0 +1,101 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.location-privacy.patterns.ldp6-aggregate-hexgrid",
+  "name": "LDP6 Aggregate to Hexagonal Grid",
+  "abstract": "Data-transfer policy requiring spatial aggregation to a hexagonal grid with a defined minimum resolution.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.policy-set"
+  ],
+  "tags": [
+    "ODRL",
+    "location privacy",
+    "policy pattern",
+    "DSSC",
+    "ldp6-aggregate-hexgrid"
+  ],
+  "sources": [
+    {
+      "title": "Using Sensitive Location Data to its Full Potential - wetransform",
+      "link": "https://wetransform.to/news-and-events/sensitive-location-data-full-potential/"
+    },
+    {
+      "title": "ODRL Information Model 2.2",
+      "link": "https://www.w3.org/TR/odrl-model/"
+    },
+    {
+      "title": "ODRL V2.2 Implementation Best Practices",
+      "link": "https://w3c.github.io/odrl/bp/"
+    },
+    {
+      "title": "SAGE WP2 Meeting - Location Data Policies in the EDC",
+      "link": "urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/tests/example.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/tests/invalid-location-policy-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Generic ODRL location policy example",
+      "description": "Data-transfer policy requiring spatial aggregation to a hexagonal grid with a defined minimum resolution.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/examples/example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/example_1_1.json",
+          "sizeBytes": 827,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"lp\": \"https://wetransform.eu/ns/odrl/location-privacy#\",\n      \"geofence\": \"https://wetransform.eu/ns/vc/geofence#\",\n      \"vc\": \"https://www.w3.org/2018/credentials#\"\n    }\n  ],\n  \"@type\": \"odrl:Set\",\n  \"uid\": \"urn:policy:ldp-aggregate-res8\",\n  \"permission\": [\n    {\n      \"target\": \"urn:asset:protected-resource\",\n      \"action\": \"use\",\n      \"duty\": [\n        {\n          \"action\": \"lp:aggregate\",\n          \"constraint\": [\n            {\n              \"leftOperand\": \"lp:algo\",\n              \"operator\": \"eq\",\n              \"rightOperand\": \"lp:HexGridAgg\"\n            },\n            {\n              \"leftOperand\": \"lp:hexGridRes\",\n              \"operator\": \"gte\",\n              \"rightOperand\": 8\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "Eclipse EDC example",
+      "description": "Starter EDC-compatible payload. Validate custom operands/functions in the connector policy engine.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/examples/edc-example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/example_2_1.json",
+          "sizeBytes": 827,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"lp\": \"https://wetransform.eu/ns/odrl/location-privacy#\",\n      \"geofence\": \"https://wetransform.eu/ns/vc/geofence#\",\n      \"vc\": \"https://www.w3.org/2018/credentials#\"\n    }\n  ],\n  \"@type\": \"odrl:Set\",\n  \"uid\": \"urn:policy:ldp-aggregate-res8\",\n  \"permission\": [\n    {\n      \"target\": \"urn:asset:protected-resource\",\n      \"action\": \"use\",\n      \"duty\": [\n        {\n          \"action\": \"lp:aggregate\",\n          \"constraint\": [\n            {\n              \"leftOperand\": \"lp:algo\",\n              \"operator\": \"eq\",\n              \"rightOperand\": \"lp:HexGridAgg\"\n            },\n            {\n              \"leftOperand\": \"lp:hexGridRes\",\n              \"operator\": \"gte\",\n              \"rightOperand\": 8\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "Location Privacy Proxy example",
+      "description": "Starter payload for delegation to a Location Privacy Proxy / PEP in the data transfer scope.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/examples/lpp-example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/example_3_1.json",
+          "sizeBytes": 827,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"lp\": \"https://wetransform.eu/ns/odrl/location-privacy#\",\n      \"geofence\": \"https://wetransform.eu/ns/vc/geofence#\",\n      \"vc\": \"https://www.w3.org/2018/credentials#\"\n    }\n  ],\n  \"@type\": \"odrl:Set\",\n  \"uid\": \"urn:policy:ldp-aggregate-res8\",\n  \"permission\": [\n    {\n      \"target\": \"urn:asset:protected-resource\",\n      \"action\": \"use\",\n      \"duty\": [\n        {\n          \"action\": \"lp:aggregate\",\n          \"constraint\": [\n            {\n              \"leftOperand\": \"lp:algo\",\n              \"operator\": \"eq\",\n              \"rightOperand\": \"lp:HexGridAgg\"\n            },\n            {\n              \"leftOperand\": \"lp:hexGridRes\",\n              \"operator\": \"gte\",\n              \"rightOperand\": 8\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/schema.json\ntitle: LDP6 Aggregate to Hexagonal Grid\n$ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.yaml\n"
+}

@@ -1,0 +1,22 @@
+examples:
+  - title: Generic ODRL location policy example
+    description: >
+      Data-transfer policy retaining original spatial reference while removing or
+      degrading selected sensitive attributes.
+    snippets:
+      - language: json
+        ref: examples/example.json
+  - title: Eclipse EDC example
+    description: >
+      Starter EDC-compatible payload. Validate custom operands/functions in the
+      connector policy engine.
+    snippets:
+      - language: json
+        ref: examples/edc-example.json
+  - title: Location Privacy Proxy example
+    description: >
+      Starter payload for delegation to a Location Privacy Proxy / PEP in the data
+      transfer scope.
+    snippets:
+      - language: json
+        ref: examples/lpp-example.json

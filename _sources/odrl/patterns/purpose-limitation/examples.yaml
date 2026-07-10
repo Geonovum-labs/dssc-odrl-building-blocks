@@ -1,0 +1,21 @@
+examples:
+  - title: Generic ODRL example
+    description: >
+      Allows use only for a declared purpose.
+    snippets:
+      - language: json
+        ref: examples/example.json
+  - title: Eclipse EDC example
+    description: >
+      Starter example for Eclipse EDC-style policy payloads. Adapt operands and
+      policy bindings to the connector configuration.
+    snippets:
+      - language: json
+        ref: examples/edc-example.json
+  - title: TNO TSG example
+    description: >
+      Starter example for TNO TSG-style policy payloads. Adapt operands and rule
+      templates to the connector configuration.
+    snippets:
+      - language: json
+        ref: examples/tsg-example.json

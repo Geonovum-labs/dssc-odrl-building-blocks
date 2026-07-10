@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "edc": "https://w3id.org/edc/v0.0.1/ns/",
+    "@vocab": "http://www.w3.org/ns/odrl.jsonld"
+  },
+  "@type": "Offer",
+  "target": "urn:example:dataset:1",
+  "permission": [
+    {
+      "action": "use",
+      "constraint": {
+        "and": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "leftOperand": "lp:positionalAccuracyMeters",
+  "operator": "gte",
+  "rightOperand": 0
+}

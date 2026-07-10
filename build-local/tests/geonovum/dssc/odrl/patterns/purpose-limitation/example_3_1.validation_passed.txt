@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.patterns.purpose-limitation - Purpose Limitation
+Generated 2026-07-10T12:32:55.053055+00:00
+=== Files ===
+Using examples/tsg-example.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

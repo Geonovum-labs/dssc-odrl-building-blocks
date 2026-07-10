@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/building-blocks/odrl/constraint-atomic/schema.json
+title: ODRL Atomic Constraint
+type: object
+required:
+- leftOperand
+- operator
+properties:
+  leftOperand:
+    type: string
+  operator:
+    type: string
+    enum:
+    - eq
+    - neq
+    - gt
+    - gteq
+    - lt
+    - lteq
+    - isAnyOf
+    - isAllOf
+    - isNoneOf
+    - gte
+    - lte
+    - isPartOf
+  rightOperand: {}
+  rightOperandReference:
+    type: string
+  unit:
+    type: string
+  dataType:
+    type: string
+oneOf:
+- required:
+  - rightOperand
+- required:
+  - rightOperandReference
+additionalProperties: true

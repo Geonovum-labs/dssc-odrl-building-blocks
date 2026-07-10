@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.patterns.no-redistribution - No Redistribution
+Generated 2026-07-10T12:32:55.022994+00:00
+=== Files ===
+Using examples/example.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

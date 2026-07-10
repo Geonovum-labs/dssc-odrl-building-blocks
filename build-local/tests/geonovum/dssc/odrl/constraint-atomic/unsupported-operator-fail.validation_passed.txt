@@ -1,0 +1,34 @@
+Validation report for nl.geonovum.dssc.odrl.constraint-atomic - ODRL Atomic Constraint
+Generated 2026-07-10T12:32:54.261631+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using unsupported-operator-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'contains' is not one of ['eq', 'neq', 'gt', 'gteq', 'lt', 'lteq', 'isAnyOf', 'isAllOf', 'isNoneOf', 'gte', 'lte', 'isPartOf']
+
+Failed validating 'enum' in schema['properties']['operator']:
+    {'enum': ['eq',
+              'neq',
+              'gt',
+              'gteq',
+              'lt',
+              'lteq',
+              'isAnyOf',
+              'isAllOf',
+              'isNoneOf',
+              'gte',
+              'lte',
+              'isPartOf'],
+     'type': 'string'}
+
+On instance['operator']:
+    'contains'
+=== End JSON Schema ===
+

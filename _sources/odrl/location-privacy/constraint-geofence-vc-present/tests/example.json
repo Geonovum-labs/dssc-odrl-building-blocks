@@ -1,0 +1,12 @@
+[
+  {
+    "leftOperand": "geofence:credentialSubject.geofence.URL",
+    "operator": "neq",
+    "rightOperand": null
+  },
+  {
+    "leftOperand": "geofence:credentialSubject.geofence.hash",
+    "operator": "neq",
+    "rightOperand": null
+  }
+]

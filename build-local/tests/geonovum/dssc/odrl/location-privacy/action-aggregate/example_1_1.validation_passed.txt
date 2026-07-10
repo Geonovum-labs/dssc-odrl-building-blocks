@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.action-aggregate - Location Privacy Aggregate Action
+Generated 2026-07-10T12:32:54.291809+00:00
+=== Files ===
+Using examples/action.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

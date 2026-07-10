@@ -1,0 +1,22 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-filter - Geofence Filter Constraint
+Generated 2026-07-10T12:32:54.412434+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using invalid-constraint-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'eq' is not one of ['isPartOf', 'odrl:isPartOf']
+
+Failed validating 'enum' in schema['properties']['operator']:
+    {'enum': ['isPartOf', 'odrl:isPartOf']}
+
+On instance['operator']:
+    'eq'
+=== End JSON Schema ===
+

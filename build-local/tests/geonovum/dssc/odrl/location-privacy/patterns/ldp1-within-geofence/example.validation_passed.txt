@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.patterns.ldp1-within-geofence - LDP1 Within Geofence Transfer Duty
+Generated 2026-07-10T12:32:54.688978+00:00
+=== Files ===
+Using example.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

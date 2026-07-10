@@ -1,0 +1,285 @@
+{
+  "title": "Validation report for nl.geonovum.dssc.odrl.patterns.purpose-limitation - Purpose Limitation",
+  "bblockName": "Purpose Limitation",
+  "bblockId": "nl.geonovum.dssc.odrl.patterns.purpose-limitation",
+  "generated": "2026-07-10T12:32:55.053103+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/patterns/purpose-limitation/tests/example.json",
+        "url": "http://localhost:9090/register/_sources/odrl/patterns/purpose-limitation/tests/example.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/patterns/purpose-limitation/tests/invalid-pattern-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/patterns/purpose-limitation/tests/invalid-pattern-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-pattern-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'action' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'action' is a required property\n\nFailed validating 'required' in schema['properties']['permission']['items']:\n    {'$id': 'https://example.org/building-blocks/odrl/permission/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'additionalProperties': True,\n     'properties': {'@id': {'type': 'string'},\n                    'action': {'oneOf': [{'type': 'string'},\n                                         {'additionalProperties': True,\n                                          'properties': {'@id': {'type': 'string'}},\n                                          'required': ['@id'],\n                                          'type': 'object'}]},\n                    'constraint': {'oneOf': [{'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml'},\n                                                        {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml'}]},\n                                             {'items': {'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml'},\n                                                                  {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml'}]},\n                                              'type': 'array'}]},\n                    'duty': {'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},\n                                       {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},\n                                        'type': 'array'}]},\n                    'target': {'oneOf': [{'type': 'string'},\n                                         {'items': {'type': 'string'},\n                                          'type': 'array'}]}},\n     'required': ['action'],\n     'title': 'ODRL Permission Rule',\n     'type': 'object'}\n\nOn instance['permission'][0]:\n    {'constraint': {'leftOperand': 'ex:purpose',\n                    'operator': 'eq',\n                    'rightOperand': 'ex:UrbanPlanning'}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/patterns/purpose-limitation/tests/example.json",
+        "url": "http://localhost:9090/register/_sources/odrl/patterns/purpose-limitation/tests/example.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/patterns/purpose-limitation/tests/invalid-pattern-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/patterns/purpose-limitation/tests/invalid-pattern-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-pattern-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'action' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'action' is a required property\n\nFailed validating 'required' in schema['properties']['permission']['items']:\n    {'$id': 'https://example.org/building-blocks/odrl/permission/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'additionalProperties': True,\n     'properties': {'@id': {'type': 'string'},\n                    'action': {'oneOf': [{'type': 'string'},\n                                         {'additionalProperties': True,\n                                          'properties': {'@id': {'type': 'string'}},\n                                          'required': ['@id'],\n                                          'type': 'object'}]},\n                    'constraint': {'oneOf': [{'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml'},\n                                                        {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml'}]},\n                                             {'items': {'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml'},\n                                                                  {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml'}]},\n                                              'type': 'array'}]},\n                    'duty': {'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},\n                                       {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},\n                                        'type': 'array'}]},\n                    'target': {'oneOf': [{'type': 'string'},\n                                         {'items': {'type': 'string'},\n                                          'type': 'array'}]}},\n     'required': ['action'],\n     'title': 'ODRL Permission Rule',\n     'type': 'object'}\n\nOn instance['permission'][0]:\n    {'constraint': {'leftOperand': 'ex:purpose',\n                    'operator': 'eq',\n                    'rightOperand': 'ex:UrbanPlanning'}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/patterns/purpose-limitation/example_1_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/patterns/purpose-limitation/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/example.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/patterns/purpose-limitation/example_2_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/patterns/purpose-limitation/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/edc-example.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/patterns/purpose-limitation/example_3_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/patterns/purpose-limitation/example_3_1.json",
+        "exampleIndex": 3,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/tsg-example.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0
+  }
+}

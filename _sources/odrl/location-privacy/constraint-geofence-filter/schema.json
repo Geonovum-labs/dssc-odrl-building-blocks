@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/location-privacy/constraint-geofence-filter/schema.json",
+  "title": "Geofence Filter Constraint",
+  "type": "object",
+  "required": [
+    "leftOperand",
+    "operator",
+    "rightOperand"
+  ],
+  "properties": {
+    "leftOperand": {
+      "const": "lp:geofenceFilter"
+    },
+    "operator": {
+      "enum": [
+        "isPartOf",
+        "odrl:isPartOf"
+      ]
+    },
+    "rightOperand": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

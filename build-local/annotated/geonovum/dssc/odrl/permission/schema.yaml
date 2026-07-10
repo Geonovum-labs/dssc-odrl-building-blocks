@@ -1,0 +1,42 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/building-blocks/odrl/permission/schema.json
+title: ODRL Permission Rule
+type: object
+required:
+- action
+properties:
+  '@id':
+    type: string
+  target:
+    oneOf:
+    - type: string
+    - type: array
+      items:
+        type: string
+  action:
+    oneOf:
+    - type: string
+    - type: object
+      required:
+      - '@id'
+      properties:
+        '@id':
+          type: string
+      additionalProperties: true
+  constraint:
+    oneOf:
+    - oneOf:
+      - $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml
+      - $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml
+    - type: array
+      items:
+        oneOf:
+        - $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml
+        - $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml
+  duty:
+    oneOf:
+    - $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml
+    - type: array
+      items:
+        $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml
+additionalProperties: true

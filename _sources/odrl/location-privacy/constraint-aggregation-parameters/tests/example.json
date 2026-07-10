@@ -1,0 +1,12 @@
+[
+  {
+    "leftOperand": "lp:algo",
+    "operator": "eq",
+    "rightOperand": "lp:HexGridAgg"
+  },
+  {
+    "leftOperand": "lp:hexGridRes",
+    "operator": "gte",
+    "rightOperand": 8
+  }
+]

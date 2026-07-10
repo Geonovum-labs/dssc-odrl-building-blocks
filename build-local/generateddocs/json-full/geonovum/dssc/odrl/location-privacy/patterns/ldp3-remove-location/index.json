@@ -1,0 +1,101 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.location-privacy.patterns.ldp3-remove-location",
+  "name": "LDP3 Remove Spatial Reference",
+  "abstract": "Data-transfer policy requiring removal of geometry or spatial reference before sharing attributes.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.policy-set"
+  ],
+  "tags": [
+    "ODRL",
+    "location privacy",
+    "policy pattern",
+    "DSSC",
+    "ldp3-remove-location"
+  ],
+  "sources": [
+    {
+      "title": "Using Sensitive Location Data to its Full Potential - wetransform",
+      "link": "https://wetransform.to/news-and-events/sensitive-location-data-full-potential/"
+    },
+    {
+      "title": "ODRL Information Model 2.2",
+      "link": "https://www.w3.org/TR/odrl-model/"
+    },
+    {
+      "title": "ODRL V2.2 Implementation Best Practices",
+      "link": "https://w3c.github.io/odrl/bp/"
+    },
+    {
+      "title": "SAGE WP2 Meeting - Location Data Policies in the EDC",
+      "link": "urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp3-remove-location/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp3-remove-location/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp3-remove-location/tests/example.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp3-remove-location/tests/invalid-location-policy-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Generic ODRL location policy example",
+      "description": "Data-transfer policy requiring removal of geometry or spatial reference before sharing attributes.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp3-remove-location/examples/example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/example_1_1.json",
+          "sizeBytes": 714,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"lp\": \"https://wetransform.eu/ns/odrl/location-privacy#\",\n      \"geofence\": \"https://wetransform.eu/ns/vc/geofence#\",\n      \"vc\": \"https://www.w3.org/2018/credentials#\"\n    }\n  ],\n  \"@type\": \"odrl:Set\",\n  \"uid\": \"urn:policy:ldp-remove-location\",\n  \"permission\": [\n    {\n      \"target\": \"urn:asset:protected-resource\",\n      \"action\": \"use\",\n      \"duty\": [\n        {\n          \"action\": \"lp:removeLocation\",\n          \"constraint\": [\n            {\n              \"leftOperand\": \"lp:geometrySelector\",\n              \"operator\": \"eq\",\n              \"rightOperand\": \"$.features[*].geometry\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "Eclipse EDC example",
+      "description": "Starter EDC-compatible payload. Validate custom operands/functions in the connector policy engine.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp3-remove-location/examples/edc-example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/example_2_1.json",
+          "sizeBytes": 714,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"lp\": \"https://wetransform.eu/ns/odrl/location-privacy#\",\n      \"geofence\": \"https://wetransform.eu/ns/vc/geofence#\",\n      \"vc\": \"https://www.w3.org/2018/credentials#\"\n    }\n  ],\n  \"@type\": \"odrl:Set\",\n  \"uid\": \"urn:policy:ldp-remove-location\",\n  \"permission\": [\n    {\n      \"target\": \"urn:asset:protected-resource\",\n      \"action\": \"use\",\n      \"duty\": [\n        {\n          \"action\": \"lp:removeLocation\",\n          \"constraint\": [\n            {\n              \"leftOperand\": \"lp:geometrySelector\",\n              \"operator\": \"eq\",\n              \"rightOperand\": \"$.features[*].geometry\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "Location Privacy Proxy example",
+      "description": "Starter payload for delegation to a Location Privacy Proxy / PEP in the data transfer scope.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/patterns/ldp3-remove-location/examples/lpp-example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/example_3_1.json",
+          "sizeBytes": 714,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"lp\": \"https://wetransform.eu/ns/odrl/location-privacy#\",\n      \"geofence\": \"https://wetransform.eu/ns/vc/geofence#\",\n      \"vc\": \"https://www.w3.org/2018/credentials#\"\n    }\n  ],\n  \"@type\": \"odrl:Set\",\n  \"uid\": \"urn:policy:ldp-remove-location\",\n  \"permission\": [\n    {\n      \"target\": \"urn:asset:protected-resource\",\n      \"action\": \"use\",\n      \"duty\": [\n        {\n          \"action\": \"lp:removeLocation\",\n          \"constraint\": [\n            {\n              \"leftOperand\": \"lp:geometrySelector\",\n              \"operator\": \"eq\",\n              \"rightOperand\": \"$.features[*].geometry\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/location-privacy/patterns/ldp3-remove-location/schema.json\ntitle: LDP3 Remove Spatial Reference\n$ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.yaml\n"
+}

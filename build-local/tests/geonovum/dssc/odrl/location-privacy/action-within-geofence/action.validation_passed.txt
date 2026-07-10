@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.action-within-geofence - Location Privacy Within Geofence Action
+Generated 2026-07-10T12:32:54.359034+00:00
+=== Files ===
+Using action.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

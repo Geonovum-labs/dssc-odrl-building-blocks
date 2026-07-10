@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.location-privacy.constraint-positional-accuracy",
+  "name": "Positional Accuracy Constraint",
+  "abstract": "ODRL constraint defining a target minimum positional accuracy or resolution for generalized location data.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.constraint-atomic"
+  ],
+  "tags": [
+    "ODRL",
+    "location privacy",
+    "constraint"
+  ],
+  "sources": [
+    {
+      "title": "Using Sensitive Location Data to its Full Potential - wetransform",
+      "link": "https://wetransform.to/news-and-events/sensitive-location-data-full-potential/"
+    },
+    {
+      "title": "ODRL Information Model 2.2",
+      "link": "https://www.w3.org/TR/odrl-model/"
+    },
+    {
+      "title": "ODRL V2.2 Implementation Best Practices",
+      "link": "https://w3c.github.io/odrl/bp/"
+    },
+    {
+      "title": "SAGE WP2 Meeting - Location Data Policies in the EDC",
+      "link": "urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-positional-accuracy/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-positional-accuracy/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-positional-accuracy/tests/example.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-positional-accuracy/tests/invalid-constraint-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Positional Accuracy Constraint",
+      "description": "ODRL constraint defining a target minimum positional accuracy or resolution for generalized location data.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-positional-accuracy/examples/example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/example_1_1.json",
+          "sizeBytes": 95,
+          "code": "{\n  \"leftOperand\": \"lp:positionalAccuracyMeters\",\n  \"operator\": \"gte\",\n  \"rightOperand\": 100\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/location-privacy/constraint-positional-accuracy/schema.json\ntitle: Positional Accuracy Constraint\ntype: object\nrequired:\n- leftOperand\n- operator\n- rightOperand\nproperties:\n  leftOperand:\n    const: lp:positionalAccuracyMeters\n  operator:\n    enum:\n    - gte\n    - gteq\n  rightOperand:\n    type: number\n    exclusiveMinimum: 0\nadditionalProperties: true\n"
+}

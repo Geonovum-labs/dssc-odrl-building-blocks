@@ -1,0 +1,30 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/building-blocks/odrl/location-privacy/geofence-credential-reference/schema.json
+title: Participant Geofence Credential Reference
+type: object
+required:
+- credentialSubject
+properties:
+  credentialSubject:
+    type: object
+    required:
+    - id
+    - geofence
+    properties:
+      id:
+        type: string
+      geofence:
+        type: object
+        required:
+        - URL
+        - hash
+        properties:
+          URL:
+            type: string
+            format: uri
+          hash:
+            type: string
+            pattern: ^[A-Fa-f0-9]{64}$
+        additionalProperties: true
+    additionalProperties: true
+additionalProperties: true

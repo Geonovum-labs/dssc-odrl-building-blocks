@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/location-privacy/patterns/ldp1-geofence-vc-required/schema.json",
+  "title": "LDP1 Geofence Credential Required",
+  "$ref": "../../../policy-set/schema.json"
+}

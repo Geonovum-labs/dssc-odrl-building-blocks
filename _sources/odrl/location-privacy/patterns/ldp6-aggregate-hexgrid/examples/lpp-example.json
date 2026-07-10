@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/odrl.jsonld",
+    {
+      "lp": "https://wetransform.eu/ns/odrl/location-privacy#",
+      "geofence": "https://wetransform.eu/ns/vc/geofence#",
+      "vc": "https://www.w3.org/2018/credentials#"
+    }
+  ],
+  "@type": "odrl:Set",
+  "uid": "urn:policy:ldp-aggregate-res8",
+  "permission": [
+    {
+      "target": "urn:asset:protected-resource",
+      "action": "use",
+      "duty": [
+        {
+          "action": "lp:aggregate",
+          "constraint": [
+            {
+              "leftOperand": "lp:algo",
+              "operator": "eq",
+              "rightOperand": "lp:HexGridAgg"
+            },
+            {
+              "leftOperand": "lp:hexGridRes",
+              "operator": "gte",
+              "rightOperand": 8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-vc-present - Geofence Credential Presence Constraints
+Generated 2026-07-10T12:32:54.430574+00:00
+=== Files ===
+Using example.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

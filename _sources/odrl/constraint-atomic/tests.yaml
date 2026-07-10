@@ -1,0 +1,5 @@
+- ref: tests/purpose-eq.json
+- ref: tests/missing-right-operand-fail.json
+  require-fail: true
+- ref: tests/unsupported-operator-fail.json
+  require-fail: true

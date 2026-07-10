@@ -1,0 +1,7 @@
+examples:
+  - title: ODRL Use Action
+    description: >
+      The ODRL use action for usage policies.
+    snippets:
+      - language: json
+        ref: examples/action.json

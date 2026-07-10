@@ -1,0 +1,8 @@
+examples:
+  - title: Location Privacy Remove Sensitive Attributes Action
+    description: >
+      Action indicating that sensitive non-spatial attributes must be removed or
+      degraded while keeping the original spatial reference.
+    snippets:
+      - language: json
+        ref: examples/action.json

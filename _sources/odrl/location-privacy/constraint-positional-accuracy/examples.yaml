@@ -1,0 +1,8 @@
+examples:
+  - title: Positional Accuracy Constraint
+    description: >
+      ODRL constraint defining a target minimum positional accuracy or resolution
+      for generalized location data.
+    snippets:
+      - language: json
+        ref: examples/example.json

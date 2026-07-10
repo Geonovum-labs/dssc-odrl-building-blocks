@@ -1,0 +1,96 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.patterns.no-redistribution",
+  "name": "No Redistribution",
+  "abstract": "Allows use while explicitly prohibiting redistribution.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.policy-set"
+  ],
+  "tags": [
+    "ODRL",
+    "policy pattern",
+    "DSSC",
+    "no-redistribution"
+  ],
+  "sources": [
+    {
+      "title": "DSSC Blueprint - Access & Usage Policies Enforcement",
+      "link": "https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement"
+    },
+    {
+      "title": "Eclipse Tractus-X Connector Kit - Working with Policies",
+      "link": "https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/"
+    },
+    {
+      "title": "TNO Security Gateway - Policy Enforcement Framework",
+      "link": "https://tno-tsg.gitlab.io/docs/core-container/pef/"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/no-redistribution/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/no-redistribution/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/patterns/no-redistribution/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/no-redistribution/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/patterns/no-redistribution/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/patterns/no-redistribution/tests/example.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/patterns/no-redistribution/tests/invalid-pattern-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Generic ODRL example",
+      "description": "Allows use while explicitly prohibiting redistribution.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/patterns/no-redistribution/examples/example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/patterns/no-redistribution/example_1_1.json",
+          "sizeBytes": 264,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"ex\": \"https://example.org/policy/\"\n    }\n  ],\n  \"@type\": \"Set\",\n  \"permission\": [\n    {\n      \"action\": \"use\"\n    }\n  ],\n  \"prohibition\": [\n    {\n      \"action\": \"ex:redistribute\"\n    }\n  ]\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "Eclipse EDC example",
+      "description": "Starter example for Eclipse EDC-style policy payloads. Adapt operands and policy bindings to the connector configuration.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/patterns/no-redistribution/examples/edc-example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/patterns/no-redistribution/example_2_1.json",
+          "sizeBytes": 264,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"ex\": \"https://example.org/policy/\"\n    }\n  ],\n  \"@type\": \"Set\",\n  \"permission\": [\n    {\n      \"action\": \"use\"\n    }\n  ],\n  \"prohibition\": [\n    {\n      \"action\": \"ex:redistribute\"\n    }\n  ]\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "TNO TSG example",
+      "description": "Starter example for TNO TSG-style policy payloads. Adapt operands and rule templates to the connector configuration.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/patterns/no-redistribution/examples/tsg-example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/patterns/no-redistribution/example_3_1.json",
+          "sizeBytes": 264,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"ex\": \"https://example.org/policy/\"\n    }\n  ],\n  \"@type\": \"Set\",\n  \"permission\": [\n    {\n      \"action\": \"use\"\n    }\n  ],\n  \"prohibition\": [\n    {\n      \"action\": \"ex:redistribute\"\n    }\n  ]\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/patterns/no-redistribution/schema.json\ntitle: No Redistribution\n$ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.yaml\n"
+}

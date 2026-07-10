@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.patterns.access-by-participant-credential - Access by Participant Credential
+Generated 2026-07-10T12:32:54.999875+00:00
+=== Files ===
+Using examples/tsg-example.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

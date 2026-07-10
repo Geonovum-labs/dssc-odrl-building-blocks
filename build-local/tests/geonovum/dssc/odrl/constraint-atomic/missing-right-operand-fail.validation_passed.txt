@@ -1,0 +1,47 @@
+Validation report for nl.geonovum.dssc.odrl.constraint-atomic - ODRL Atomic Constraint
+Generated 2026-07-10T12:32:54.261194+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using missing-right-operand-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: {'leftOperand': 'ex:purpose', 'operator': 'eq'} is not valid under any of the given schemas
+
+Failed validating 'oneOf' in schema:
+    {'$id': 'https://example.org/building-blocks/odrl/constraint-atomic/schema.json',
+     '$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'additionalProperties': True,
+     'oneOf': [{'required': ['rightOperand']},
+               {'required': ['rightOperandReference']}],
+     'properties': {'dataType': {'type': 'string'},
+                    'leftOperand': {'type': 'string'},
+                    'operator': {'enum': ['eq',
+                                          'neq',
+                                          'gt',
+                                          'gteq',
+                                          'lt',
+                                          'lteq',
+                                          'isAnyOf',
+                                          'isAllOf',
+                                          'isNoneOf',
+                                          'gte',
+                                          'lte',
+                                          'isPartOf'],
+                                 'type': 'string'},
+                    'rightOperand': {},
+                    'rightOperandReference': {'type': 'string'},
+                    'unit': {'type': 'string'}},
+     'required': ['leftOperand', 'operator'],
+     'title': 'ODRL Atomic Constraint',
+     'type': 'object'}
+
+On instance:
+    {'leftOperand': 'ex:purpose', 'operator': 'eq'}
+=== End JSON Schema ===
+

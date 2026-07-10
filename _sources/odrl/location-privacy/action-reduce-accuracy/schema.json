@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/location-privacy/action-reduce-accuracy/schema.json",
+  "title": "Location Privacy Reduce Positional Accuracy Action",
+  "oneOf": [
+    {
+      "const": "lp:reduceAccuracy"
+    },
+    {
+      "type": "object",
+      "required": [
+        "@id"
+      ],
+      "properties": {
+        "@id": {
+          "const": "lp:reduceAccuracy"
+        }
+      },
+      "additionalProperties": true
+    }
+  ]
+}

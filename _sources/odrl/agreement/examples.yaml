@@ -1,0 +1,7 @@
+examples:
+  - title: ODRL Agreement for Dataspace Protocol
+    description: >
+      An ODRL Agreement profile for negotiated dataspace contracts.
+    snippets:
+      - language: json
+        ref: examples/simple.json

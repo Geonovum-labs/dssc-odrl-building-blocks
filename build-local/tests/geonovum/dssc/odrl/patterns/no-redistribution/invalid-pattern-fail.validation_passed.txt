@@ -1,0 +1,52 @@
+Validation report for nl.geonovum.dssc.odrl.patterns.no-redistribution - No Redistribution
+Generated 2026-07-10T12:32:55.021978+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using invalid-pattern-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: {'@context': ['https://www.w3.org/ns/odrl.jsonld', {'ex': 'https://example.org/policy/'}], '@type': 'Set'} is not valid under any of the given schemas
+
+Failed validating 'anyOf' in schema:
+    {'$id': 'https://example.org/building-blocks/odrl/policy-set/schema.json',
+     '$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'additionalProperties': True,
+     'anyOf': [{'required': ['permission']},
+               {'required': ['prohibition']},
+               {'required': ['obligation']}],
+     'properties': {'@context': {'oneOf': [{'type': 'string'},
+                                           {'type': 'object'},
+                                           {'items': {'oneOf': [{'type': 'string'},
+                                                                {'type': 'object'}]},
+                                            'type': 'array'}]},
+                    '@id': {'type': 'string'},
+                    '@type': {'oneOf': [{'const': 'Set'},
+                                        {'const': 'odrl:Set'}]},
+                    'assignee': {'type': 'string'},
+                    'assigner': {'type': 'string'},
+                    'obligation': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},
+                                   'type': 'array'},
+                    'permission': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/permission/schema.yaml'},
+                                   'type': 'array'},
+                    'profile': {'type': 'string'},
+                    'prohibition': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/prohibition/schema.yaml'},
+                                    'type': 'array'},
+                    'target': {'oneOf': [{'type': 'string'},
+                                         {'items': {'type': 'string'},
+                                          'type': 'array'}]}},
+     'required': ['@type'],
+     'title': 'ODRL Policy Set for Dataspace Protocol',
+     'type': 'object'}
+
+On instance:
+    {'@context': ['https://www.w3.org/ns/odrl.jsonld',
+                  {'ex': 'https://example.org/policy/'}],
+     '@type': 'Set'}
+=== End JSON Schema ===
+

@@ -1,0 +1,313 @@
+{
+  "title": "Validation report for nl.geonovum.dssc.odrl.location-privacy.geofence-credential-reference - Participant Geofence Credential Reference",
+  "bblockName": "Participant Geofence Credential Reference",
+  "bblockId": "nl.geonovum.dssc.odrl.location-privacy.geofence-credential-reference",
+  "generated": "2026-07-10T12:32:54.279014+00:00",
+  "result": false,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/geofence-credential-reference/tests/bad-hash-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/tests/bad-hash-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using bad-hash-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'not-a-sha256' does not match '^[A-Fa-f0-9]{64}$'",
+              "isError": true,
+              "message": "ValidationError: 'not-a-sha256' does not match '^[A-Fa-f0-9]{64}$'\n\nFailed validating 'pattern' in schema['properties']['credentialSubject']['properties']['geofence']['properties']['hash']:\n    {'pattern': '^[A-Fa-f0-9]{64}$', 'type': 'string'}\n\nOn instance['credentialSubject']['geofence']['hash']:\n    'not-a-sha256'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/geofence-credential-reference/tests/geofence-credential-subject.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/tests/geofence-credential-subject.json",
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using geofence-credential-subject.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899' does not match '^[A-Fa-f0-9]{64}$'",
+              "isError": true,
+              "message": "ValidationError: '4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899' does not match '^[A-Fa-f0-9]{64}$'\n\nFailed validating 'pattern' in schema['properties']['credentialSubject']['properties']['geofence']['properties']['hash']:\n    {'pattern': '^[A-Fa-f0-9]{64}$', 'type': 'string'}\n\nOn instance['credentialSubject']['geofence']['hash']:\n    '4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/geofence-credential-reference/tests/missing-hash-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/tests/missing-hash-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-hash-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'hash' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'hash' is a required property\n\nFailed validating 'required' in schema['properties']['credentialSubject']['properties']['geofence']:\n    {'additionalProperties': True,\n     'properties': {'URL': {'format': 'uri', 'type': 'string'},\n                    'hash': {'pattern': '^[A-Fa-f0-9]{64}$',\n                             'type': 'string'}},\n     'required': ['URL', 'hash'],\n     'type': 'object'}\n\nOn instance['credentialSubject']['geofence']:\n    {'URL': 'https://example.org/geofence.geojson'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/geofence-credential-reference/tests/geofence-credential-subject.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/tests/geofence-credential-subject.json",
+        "language": "json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using geofence-credential-subject.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899' does not match '^[A-Fa-f0-9]{64}$'",
+              "isError": true,
+              "message": "ValidationError: '4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899' does not match '^[A-Fa-f0-9]{64}$'\n\nFailed validating 'pattern' in schema['properties']['credentialSubject']['properties']['geofence']['properties']['hash']:\n    {'pattern': '^[A-Fa-f0-9]{64}$', 'type': 'string'}\n\nOn instance['credentialSubject']['geofence']['hash']:\n    '4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/geofence-credential-reference/tests/missing-hash-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/tests/missing-hash-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-hash-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'hash' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'hash' is a required property\n\nFailed validating 'required' in schema['properties']['credentialSubject']['properties']['geofence']:\n    {'additionalProperties': True,\n     'properties': {'URL': {'format': 'uri', 'type': 'string'},\n                    'hash': {'pattern': '^[A-Fa-f0-9]{64}$',\n                             'type': 'string'}},\n     'required': ['URL', 'hash'],\n     'type': 'object'}\n\nOn instance['credentialSubject']['geofence']:\n    {'URL': 'https://example.org/geofence.geojson'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/geofence-credential-reference/tests/bad-hash-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/geofence-credential-reference/tests/bad-hash-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using bad-hash-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'not-a-sha256' does not match '^[A-Fa-f0-9]{64}$'",
+              "isError": true,
+              "message": "ValidationError: 'not-a-sha256' does not match '^[A-Fa-f0-9]{64}$'\n\nFailed validating 'pattern' in schema['properties']['credentialSubject']['properties']['geofence']['properties']['hash']:\n    {'pattern': '^[A-Fa-f0-9]{64}$', 'type': 'string'}\n\nOn instance['credentialSubject']['geofence']['hash']:\n    'not-a-sha256'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/example_1_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/geofence-credential-subject.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899' does not match '^[A-Fa-f0-9]{64}$'",
+              "isError": true,
+              "message": "ValidationError: '4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899' does not match '^[A-Fa-f0-9]{64}$'\n\nFailed validating 'pattern' in schema['properties']['credentialSubject']['properties']['geofence']['properties']['hash']:\n    {'pattern': '^[A-Fa-f0-9]{64}$', 'type': 'string'}\n\nOn instance['credentialSubject']['geofence']['hash']:\n    '4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899'"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 7,
+    "passed": 4,
+    "failed": 3
+  }
+}

@@ -1,0 +1,18 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.geofence-credential-reference - Participant Geofence Credential Reference
+Generated 2026-07-10T12:32:54.278980+00:00
+=== Files ===
+Using examples/geofence-credential-subject.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: '4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899' does not match '^[A-Fa-f0-9]{64}$'
+
+Failed validating 'pattern' in schema['properties']['credentialSubject']['properties']['geofence']['properties']['hash']:
+    {'pattern': '^[A-Fa-f0-9]{64}$', 'type': 'string'}
+
+On instance['credentialSubject']['geofence']['hash']:
+    '4e6e861333fdb00112233445566778899aabbccddeeff00112233445566778899'
+=== End JSON Schema ===
+

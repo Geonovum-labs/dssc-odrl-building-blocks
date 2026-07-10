@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-vc-present",
+  "name": "Geofence Credential Presence Constraints",
+  "abstract": "ODRL constraints requiring both geofence URL and geofence hash values to be present in a participant credential.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.constraint-atomic"
+  ],
+  "tags": [
+    "ODRL",
+    "location privacy",
+    "constraint"
+  ],
+  "sources": [
+    {
+      "title": "Using Sensitive Location Data to its Full Potential - wetransform",
+      "link": "https://wetransform.to/news-and-events/sensitive-location-data-full-potential/"
+    },
+    {
+      "title": "ODRL Information Model 2.2",
+      "link": "https://www.w3.org/TR/odrl-model/"
+    },
+    {
+      "title": "ODRL V2.2 Implementation Best Practices",
+      "link": "https://w3c.github.io/odrl/bp/"
+    },
+    {
+      "title": "SAGE WP2 Meeting - Location Data Policies in the EDC",
+      "link": "urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-vc-present/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-vc-present/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-vc-present/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-vc-present/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-vc-present/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-vc-present/tests/example.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-vc-present/tests/invalid-constraint-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Geofence Credential Presence Constraints",
+      "description": "ODRL constraints requiring both geofence URL and geofence hash values to be present in a participant credential.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-vc-present/examples/example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/constraint-geofence-vc-present/example_1_1.json",
+          "sizeBytes": 242,
+          "code": "[\n  {\n    \"leftOperand\": \"geofence:credentialSubject.geofence.URL\",\n    \"operator\": \"neq\",\n    \"rightOperand\": null\n  },\n  {\n    \"leftOperand\": \"geofence:credentialSubject.geofence.hash\",\n    \"operator\": \"neq\",\n    \"rightOperand\": null\n  }\n]\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/location-privacy/constraint-geofence-vc-present/schema.json\ntitle: Geofence Credential Presence Constraints\ntype: array\nminItems: 2\nitems:\n  $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml\n"
+}

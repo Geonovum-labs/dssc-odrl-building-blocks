@@ -1,0 +1,19 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/building-blocks/odrl/location-privacy/constraint-positional-accuracy/schema.json
+title: Positional Accuracy Constraint
+type: object
+required:
+- leftOperand
+- operator
+- rightOperand
+properties:
+  leftOperand:
+    const: lp:positionalAccuracyMeters
+  operator:
+    enum:
+    - gte
+    - gteq
+  rightOperand:
+    type: number
+    exclusiveMinimum: 0
+additionalProperties: true

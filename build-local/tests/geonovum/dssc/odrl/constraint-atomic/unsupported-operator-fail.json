@@ -1,0 +1,5 @@
+{
+  "leftOperand": "ex:purpose",
+  "operator": "contains",
+  "rightOperand": "ex:Research"
+}

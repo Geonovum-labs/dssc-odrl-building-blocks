@@ -1,0 +1,8 @@
+examples:
+  - title: Location Privacy Remove Location Action
+    description: >
+      Action indicating that the spatial reference must be removed from
+      transferred data.
+    snippets:
+      - language: json
+        ref: examples/action.json

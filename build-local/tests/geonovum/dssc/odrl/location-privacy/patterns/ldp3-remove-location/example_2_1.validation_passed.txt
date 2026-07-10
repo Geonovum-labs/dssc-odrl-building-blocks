@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.patterns.ldp3-remove-location - LDP3 Remove Spatial Reference
+Generated 2026-07-10T12:32:54.843769+00:00
+=== Files ===
+Using examples/edc-example.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

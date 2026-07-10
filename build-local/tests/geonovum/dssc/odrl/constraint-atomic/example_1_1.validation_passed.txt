@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.constraint-atomic - ODRL Atomic Constraint
+Generated 2026-07-10T12:32:54.262018+00:00
+=== Files ===
+Using examples/purpose-eq.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

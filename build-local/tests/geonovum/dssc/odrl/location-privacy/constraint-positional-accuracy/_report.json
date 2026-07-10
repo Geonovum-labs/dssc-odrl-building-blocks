@@ -1,0 +1,213 @@
+{
+  "title": "Validation report for nl.geonovum.dssc.odrl.location-privacy.constraint-positional-accuracy - Positional Accuracy Constraint",
+  "bblockName": "Positional Accuracy Constraint",
+  "bblockId": "nl.geonovum.dssc.odrl.location-privacy.constraint-positional-accuracy",
+  "generated": "2026-07-10T12:32:54.449127+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/constraint-positional-accuracy/tests/example.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-positional-accuracy/tests/example.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/constraint-positional-accuracy/tests/invalid-constraint-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-positional-accuracy/tests/invalid-constraint-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-constraint-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "0 is less than or equal to the minimum of 0",
+              "isError": true,
+              "message": "ValidationError: 0 is less than or equal to the minimum of 0\n\nFailed validating 'exclusiveMinimum' in schema['properties']['rightOperand']:\n    {'exclusiveMinimum': 0, 'type': 'number'}\n\nOn instance['rightOperand']:\n    0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/constraint-positional-accuracy/tests/example.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-positional-accuracy/tests/example.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/constraint-positional-accuracy/tests/invalid-constraint-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-positional-accuracy/tests/invalid-constraint-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-constraint-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "0 is less than or equal to the minimum of 0",
+              "isError": true,
+              "message": "ValidationError: 0 is less than or equal to the minimum of 0\n\nFailed validating 'exclusiveMinimum' in schema['properties']['rightOperand']:\n    {'exclusiveMinimum': 0, 'type': 'number'}\n\nOn instance['rightOperand']:\n    0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/example_1_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/example.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0
+  }
+}

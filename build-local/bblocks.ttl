@@ -1,0 +1,1251 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<bblocks://nl.geonovum.dssc.odrl.action-access> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Dataspace Access Action" ;
+    dct:abstract "The access action pattern for access policies and offer visibility."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/action-access/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/action-access/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Dataspace Access Action" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "access",
+        "action" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/action-access/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/action-access/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.agreement> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODRL Agreement for Dataspace Protocol" ;
+    dct:abstract "An ODRL Agreement profile for negotiated dataspace contracts."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/agreement/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/agreement/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "ODRL Agreement for Dataspace Protocol" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "Dataspace Protocol",
+        "JSON-LD",
+        "ODRL",
+        "agreement" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/agreement/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/agreement/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic>,
+        <bblocks://nl.geonovum.dssc.odrl.obligation>,
+        <bblocks://nl.geonovum.dssc.odrl.permission>,
+        <bblocks://nl.geonovum.dssc.odrl.prohibition> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.action-aggregate> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Location Privacy Aggregate Action" ;
+    dct:abstract "Action indicating that transferred spatial data must be aggregated to a larger spatial unit."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/action-aggregate/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/action-aggregate/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Location Privacy Aggregate Action" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "action",
+        "location privacy",
+        "lp:aggregate" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-aggregate/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-aggregate/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.action-use> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.action-pseudonymize-location> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Location Privacy Pseudonymize Location Action" ;
+    dct:abstract "Action indicating that the spatial reference must be pseudonymized before transfer."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/action-pseudonymize-location/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/action-pseudonymize-location/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Location Privacy Pseudonymize Location Action" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "action",
+        "location privacy",
+        "lp:pseudonymizeLocation" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-pseudonymize-location/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-pseudonymize-location/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.action-use> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.action-reduce-accuracy> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Location Privacy Reduce Positional Accuracy Action" ;
+    dct:abstract "Action indicating that the spatial reference must be generalized or degraded to a lower positional accuracy or resolution."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/action-reduce-accuracy/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/action-reduce-accuracy/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Location Privacy Reduce Positional Accuracy Action" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "action",
+        "location privacy",
+        "lp:reduceAccuracy" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-reduce-accuracy/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-reduce-accuracy/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.action-use> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.action-remove-location> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Location Privacy Remove Location Action" ;
+    dct:abstract "Action indicating that the spatial reference must be removed from transferred data."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/action-remove-location/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/action-remove-location/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Location Privacy Remove Location Action" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "action",
+        "location privacy",
+        "lp:removeLocation" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-remove-location/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-remove-location/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.action-use> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.action-remove-sensitive-attributes> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Location Privacy Remove Sensitive Attributes Action" ;
+    dct:abstract "Action indicating that sensitive non-spatial attributes must be removed or degraded while keeping the original spatial reference."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/action-remove-sensitive-attributes/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/action-remove-sensitive-attributes/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Location Privacy Remove Sensitive Attributes Action" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "action",
+        "location privacy",
+        "lp:removeSensitiveAttributes" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-remove-sensitive-attributes/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-remove-sensitive-attributes/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.action-use> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.action-within-geofence> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Location Privacy Within Geofence Action" ;
+    dct:abstract "Action indicating that transferred spatial data must be filtered or clipped to the consumer participant geofence."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/action-within-geofence/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/action-within-geofence/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Location Privacy Within Geofence Action" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "action",
+        "location privacy",
+        "lp:withinGeofence" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-within-geofence/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/action-within-geofence/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.action-use> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.constraint-aggregation-parameters> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Aggregation Parameter Constraints" ;
+    dct:abstract "ODRL constraints defining the location aggregation algorithm and minimum grid resolution or anonymity parameter."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/constraint-aggregation-parameters/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/constraint-aggregation-parameters/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Aggregation Parameter Constraints" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "constraint",
+        "location privacy" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-aggregation-parameters/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-aggregation-parameters/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-filter> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Geofence Filter Constraint" ;
+    dct:abstract "ODRL constraint describing the filter expression used to select or verify features against the consumer geofence."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Geofence Filter Constraint" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "constraint",
+        "location privacy" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-vc-present> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Geofence Credential Presence Constraints" ;
+    dct:abstract "ODRL constraints requiring both geofence URL and geofence hash values to be present in a participant credential."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/constraint-geofence-vc-present/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/constraint-geofence-vc-present/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Geofence Credential Presence Constraints" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "constraint",
+        "location privacy" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-vc-present/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-vc-present/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.constraint-positional-accuracy> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Positional Accuracy Constraint" ;
+    dct:abstract "ODRL constraint defining a target minimum positional accuracy or resolution for generalized location data."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Positional Accuracy Constraint" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "constraint",
+        "location privacy" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-positional-accuracy/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.geofence-credential-reference> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Participant Geofence Credential Reference" ;
+    dct:abstract "A Verifiable Credential subject shape that references a participant geofence by resolvable URL and SHA-256 hash."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Participant Geofence Credential Reference" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "Verifiable Credential",
+        "geofence",
+        "location privacy" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/geofence-credential-reference/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp1-geofence-vc-required> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "LDP1 Geofence Credential Required" ;
+    dct:abstract "Contract-negotiation policy requiring a participant geofence credential with URL and hash."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/patterns/ldp1-geofence-vc-required/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/patterns/ldp1-geofence-vc-required/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "LDP1 Geofence Credential Required" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "ldp1-geofence-vc-required",
+        "location privacy",
+        "policy pattern" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp1-geofence-vc-required/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp1-geofence-vc-required/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp1-within-geofence> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "LDP1 Within Geofence Transfer Duty" ;
+    dct:abstract "Data-transfer policy requiring a Location Privacy Proxy to filter or clip results to the participant geofence."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "LDP1 Within Geofence Transfer Duty" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "ldp1-within-geofence",
+        "location privacy",
+        "policy pattern" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp1-within-geofence/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp2-degrade-sensitive-attributes> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "LDP2 Remove or Degrade Sensitive Attributes" ;
+    dct:abstract "Data-transfer policy retaining original spatial reference while removing or degrading selected sensitive attributes."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/patterns/ldp2-degrade-sensitive-attributes/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/patterns/ldp2-degrade-sensitive-attributes/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "LDP2 Remove or Degrade Sensitive Attributes" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "ldp2-degrade-sensitive-attributes",
+        "location privacy",
+        "policy pattern" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp2-degrade-sensitive-attributes/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp2-degrade-sensitive-attributes/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp3-remove-location> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "LDP3 Remove Spatial Reference" ;
+    dct:abstract "Data-transfer policy requiring removal of geometry or spatial reference before sharing attributes."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "LDP3 Remove Spatial Reference" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "ldp3-remove-location",
+        "location privacy",
+        "policy pattern" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp3-remove-location/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp4-pseudonymize-location> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "LDP4 Pseudonymize Spatial Reference" ;
+    dct:abstract "Data-transfer policy requiring pseudonymization of location so that direct coordinates are replaced by pseudonymous spatial identifiers."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/patterns/ldp4-pseudonymize-location/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/patterns/ldp4-pseudonymize-location/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "LDP4 Pseudonymize Spatial Reference" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "ldp4-pseudonymize-location",
+        "location privacy",
+        "policy pattern" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp4-pseudonymize-location/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp4-pseudonymize-location/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp5-reduce-positional-accuracy> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "LDP5 Reduce Positional Accuracy" ;
+    dct:abstract "Data-transfer policy requiring location data to be generalized to a defined minimum positional accuracy or resolution."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/patterns/ldp5-reduce-positional-accuracy/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/patterns/ldp5-reduce-positional-accuracy/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "LDP5 Reduce Positional Accuracy" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "ldp5-reduce-positional-accuracy",
+        "location privacy",
+        "policy pattern" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp5-reduce-positional-accuracy/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp5-reduce-positional-accuracy/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp6-aggregate-hexgrid> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "LDP6 Aggregate to Hexagonal Grid" ;
+    dct:abstract "Data-transfer policy requiring spatial aggregation to a hexagonal grid with a defined minimum resolution."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://w3c.github.io/odrl/bp/>,
+        <https://wetransform.to/news-and-events/sensitive-location-data-full-potential/>,
+        <https://www.w3.org/TR/odrl-model/>,
+        <urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "LDP6 Aggregate to Hexagonal Grid" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "ldp6-aggregate-hexgrid",
+        "location privacy",
+        "policy pattern" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/patterns/ldp6-aggregate-hexgrid/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.patterns.access-by-participant-credential> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Access by Participant Credential" ;
+    dct:abstract "Allows use only when the requesting participant has a required verifiable credential or claim."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/patterns/access-by-participant-credential/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/patterns/access-by-participant-credential/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Access by Participant Credential" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "access-by-participant-credential",
+        "policy pattern" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/access-by-participant-credential/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/access-by-participant-credential/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.patterns.no-redistribution> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "No Redistribution" ;
+    dct:abstract "Allows use while explicitly prohibiting redistribution."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/patterns/no-redistribution/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/patterns/no-redistribution/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "No Redistribution" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "no-redistribution",
+        "policy pattern" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/no-redistribution/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/no-redistribution/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.patterns.purpose-limitation> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Purpose Limitation" ;
+    dct:abstract "Allows use only for a declared purpose."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/patterns/purpose-limitation/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/patterns/purpose-limitation/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Purpose Limitation" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "policy pattern",
+        "purpose-limitation" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/purpose-limitation/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/purpose-limitation/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.patterns.time-limited-use> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Time-Limited Use" ;
+    dct:abstract "Allows use for a limited duration after contract agreement."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/patterns/time-limited-use/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/patterns/time-limited-use/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "Time-Limited Use" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "DSSC",
+        "ODRL",
+        "policy pattern",
+        "time-limited-use" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/time-limited-use/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/time-limited-use/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.offer>,
+        <bblocks://nl.geonovum.dssc.odrl.policy-set> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<http://localhost:9090/register/build-local/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N1d1cc488a7f740859f37b83be4544f64 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-07-10T12:32:55.659386"^^xsd:dateTime ;
+            prov:startedAtTime "2026-07-10T12:32:55.241096"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    rdfs:seeAlso <http://localhost:9090/register/build-local/register.json> ] ;
+            prov:wasAssociatedWith _:N1d1cc488a7f740859f37b83be4544f64 ] .
+
+<bblocks://nl.geonovum.dssc.odrl.offer> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODRL Offer for Dataspace Protocol" ;
+    dct:abstract "An ODRL Offer profile for contract offers in catalog and negotiation flows."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/offer/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/offer/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "ODRL Offer for Dataspace Protocol" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "Dataspace Protocol",
+        "JSON-LD",
+        "ODRL",
+        "offer" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/offer/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/offer/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic>,
+        <bblocks://nl.geonovum.dssc.odrl.obligation>,
+        <bblocks://nl.geonovum.dssc.odrl.permission>,
+        <bblocks://nl.geonovum.dssc.odrl.prohibition> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.constraint-logical> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODRL Logical Constraint" ;
+    dct:abstract "A logical composition of ODRL constraints using and, or or xone."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/constraint-logical/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/constraint-logical/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "ODRL Logical Constraint" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "Dataspace Protocol",
+        "ODRL",
+        "logical constraint" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.permission> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODRL Permission Rule" ;
+    dct:abstract "A permission rule allowing an action under optional constraints and/or duties."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/permission/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/permission/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "ODRL Permission Rule" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "Dataspace Protocol",
+        "ODRL",
+        "permission",
+        "policy" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/permission/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/permission/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic>,
+        <bblocks://nl.geonovum.dssc.odrl.constraint-logical>,
+        <bblocks://nl.geonovum.dssc.odrl.obligation> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.prohibition> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODRL Prohibition Rule" ;
+    dct:abstract "A prohibition rule disallowing an action under optional constraints."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/prohibition/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/prohibition/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "ODRL Prohibition Rule" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "Dataspace Protocol",
+        "ODRL",
+        "policy",
+        "prohibition" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/prohibition/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/prohibition/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic>,
+        <bblocks://nl.geonovum.dssc.odrl.constraint-logical>,
+        <bblocks://nl.geonovum.dssc.odrl.obligation> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.obligation> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODRL Obligation / Duty Rule" ;
+    dct:abstract "An obligation or duty rule expressing an action that must be fulfilled."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/obligation/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/obligation/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "ODRL Obligation / Duty Rule" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "Dataspace Protocol",
+        "ODRL",
+        "obligation",
+        "policy" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic>,
+        <bblocks://nl.geonovum.dssc.odrl.constraint-logical> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.action-use> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODRL Use Action" ;
+    dct:abstract "The ODRL use action for usage policies."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/action-use/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/action-use/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "ODRL Use Action" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "ODRL",
+        "action",
+        "use" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/action-use/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/action-use/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.constraint-atomic> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODRL Atomic Constraint" ;
+    dct:abstract "A basic ODRL constraint with left operand, operator and right operand."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/constraint-atomic/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/constraint-atomic/index.md> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "ODRL Atomic Constraint" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "Dataspace Protocol",
+        "ODRL",
+        "constraint" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://nl.geonovum.dssc.odrl.policy-set> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ODRL Policy Set for Dataspace Protocol" ;
+    dct:abstract "A constrained ODRL Set profile for policies exchanged through the Dataspace Protocol."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-07-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/markdown/geonovum/dssc/odrl/policy-set/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <http://localhost:9090/register/build-local/generateddocs/json-full/geonovum/dssc/odrl/policy-set/index.json> ] ;
+    dct:hasVersion "0.1.0" ;
+    dct:modified "2026-07-10"^^xsd:date ;
+    dct:source <https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/>,
+        <https://tno-tsg.gitlab.io/docs/core-container/pef/>,
+        <https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> ;
+    skos:inScheme <http://localhost:9090/register/> ;
+    skos:prefLabel "ODRL Policy Set for Dataspace Protocol" ;
+    skos:topConceptOf <http://localhost:9090/register/> ;
+    dcat:keyword "Dataspace Protocol",
+        "JSON-LD",
+        "ODRL",
+        "policy-set" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://nl.geonovum.dssc.odrl.constraint-atomic>,
+        <bblocks://nl.geonovum.dssc.odrl.obligation>,
+        <bblocks://nl.geonovum.dssc.odrl.permission>,
+        <bblocks://nl.geonovum.dssc.odrl.prohibition> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/> rdfs:label "Eclipse Tractus-X Connector Kit - Working with Policies" .
+
+<https://tno-tsg.gitlab.io/docs/core-container/pef/> rdfs:label "TNO Security Gateway - Policy Enforcement Framework" .
+
+<https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement> rdfs:label "DSSC Blueprint - Access & Usage Policies Enforcement" .
+
+<https://w3c.github.io/odrl/bp/> rdfs:label "ODRL V2.2 Implementation Best Practices" .
+
+<https://wetransform.to/news-and-events/sensitive-location-data-full-potential/> rdfs:label "Using Sensitive Location Data to its Full Potential - wetransform" .
+
+<https://www.w3.org/TR/odrl-model/> rdfs:label "ODRL Information Model 2.2" .
+
+<urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf> rdfs:label "SAGE WP2 Meeting - Location Data Policies in the EDC" .
+
+<http://localhost:9090/register/> a skos:ConceptScheme,
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
+    rdfs:label "Building Blocks - DSSC Dataspace ODRL Policy Building Blocks" ;
+    dct:description """Building blocks for ODRL-based access and usage policies as exchanged through the Dataspace Protocol and used by dataspace connectors such as Eclipse EDC and TNO TSG.
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:modified "2026-07-10T12:32:53.021702"^^xsd:dateTime ;
+    owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://nl.geonovum.dssc.odrl.action-access>,
+        <bblocks://nl.geonovum.dssc.odrl.action-use>,
+        <bblocks://nl.geonovum.dssc.odrl.agreement>,
+        <bblocks://nl.geonovum.dssc.odrl.constraint-atomic>,
+        <bblocks://nl.geonovum.dssc.odrl.constraint-logical>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.action-aggregate>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.action-pseudonymize-location>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.action-reduce-accuracy>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.action-remove-location>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.action-remove-sensitive-attributes>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.action-within-geofence>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.constraint-aggregation-parameters>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-filter>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-vc-present>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.constraint-positional-accuracy>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.geofence-credential-reference>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp1-geofence-vc-required>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp1-within-geofence>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp2-degrade-sensitive-attributes>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp3-remove-location>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp4-pseudonymize-location>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp5-reduce-positional-accuracy>,
+        <bblocks://nl.geonovum.dssc.odrl.location-privacy.patterns.ldp6-aggregate-hexgrid>,
+        <bblocks://nl.geonovum.dssc.odrl.obligation>,
+        <bblocks://nl.geonovum.dssc.odrl.offer>,
+        <bblocks://nl.geonovum.dssc.odrl.patterns.access-by-participant-credential>,
+        <bblocks://nl.geonovum.dssc.odrl.patterns.no-redistribution>,
+        <bblocks://nl.geonovum.dssc.odrl.patterns.purpose-limitation>,
+        <bblocks://nl.geonovum.dssc.odrl.patterns.time-limited-use>,
+        <bblocks://nl.geonovum.dssc.odrl.permission>,
+        <bblocks://nl.geonovum.dssc.odrl.policy-set>,
+        <bblocks://nl.geonovum.dssc.odrl.prohibition> ;
+    skos:prefLabel "Building Blocks - DSSC Dataspace ODRL Policy Building Blocks" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <http://localhost:9090/register/build-local/register.json> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <http://localhost:9090/register/build-local/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <http://localhost:9090/register/build-local/bblocks.jsonld> ] ;
+    bblocks:hasValidationReport <http://localhost:9090/register/build-local/tests/report.html> .
+
+_:N1d1cc488a7f740859f37b83be4544f64 a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.5.31" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
+

@@ -1,0 +1,213 @@
+{
+  "title": "Validation report for nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-filter - Geofence Filter Constraint",
+  "bblockName": "Geofence Filter Constraint",
+  "bblockId": "nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-filter",
+  "generated": "2026-07-10T12:32:54.413310+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/constraint-geofence-filter/tests/example.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-filter/tests/example.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/constraint-geofence-filter/tests/invalid-constraint-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-filter/tests/invalid-constraint-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-constraint-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'eq' is not one of ['isPartOf', 'odrl:isPartOf']",
+              "isError": true,
+              "message": "ValidationError: 'eq' is not one of ['isPartOf', 'odrl:isPartOf']\n\nFailed validating 'enum' in schema['properties']['operator']:\n    {'enum': ['isPartOf', 'odrl:isPartOf']}\n\nOn instance['operator']:\n    'eq'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/constraint-geofence-filter/tests/example.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-filter/tests/example.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/constraint-geofence-filter/tests/invalid-constraint-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-filter/tests/invalid-constraint-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-constraint-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'eq' is not one of ['isPartOf', 'odrl:isPartOf']",
+              "isError": true,
+              "message": "ValidationError: 'eq' is not one of ['isPartOf', 'odrl:isPartOf']\n\nFailed validating 'enum' in schema['properties']['operator']:\n    {'enum': ['isPartOf', 'odrl:isPartOf']}\n\nOn instance['operator']:\n    'eq'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/example_1_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/example.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0
+  }
+}

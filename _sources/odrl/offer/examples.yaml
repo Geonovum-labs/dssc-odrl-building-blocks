@@ -1,0 +1,7 @@
+examples:
+  - title: ODRL Offer for Dataspace Protocol
+    description: >
+      An ODRL Offer profile for contract offers in catalog and negotiation flows.
+    snippets:
+      - language: json
+        ref: examples/simple.json

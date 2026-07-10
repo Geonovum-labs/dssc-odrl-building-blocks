@@ -1,0 +1,96 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.patterns.access-by-participant-credential",
+  "name": "Access by Participant Credential",
+  "abstract": "Allows use only when the requesting participant has a required verifiable credential or claim.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.policy-set"
+  ],
+  "tags": [
+    "ODRL",
+    "policy pattern",
+    "DSSC",
+    "access-by-participant-credential"
+  ],
+  "sources": [
+    {
+      "title": "DSSC Blueprint - Access & Usage Policies Enforcement",
+      "link": "https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement"
+    },
+    {
+      "title": "Eclipse Tractus-X Connector Kit - Working with Policies",
+      "link": "https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/"
+    },
+    {
+      "title": "TNO Security Gateway - Policy Enforcement Framework",
+      "link": "https://tno-tsg.gitlab.io/docs/core-container/pef/"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/access-by-participant-credential/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/access-by-participant-credential/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/patterns/access-by-participant-credential/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/patterns/access-by-participant-credential/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/patterns/access-by-participant-credential/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/patterns/access-by-participant-credential/tests/example.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/patterns/access-by-participant-credential/tests/invalid-pattern-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Generic ODRL example",
+      "description": "Allows use only when the requesting participant has a required verifiable credential or claim.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/patterns/access-by-participant-credential/examples/example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/patterns/access-by-participant-credential/example_1_1.json",
+          "sizeBytes": 356,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"ex\": \"https://example.org/policy/\"\n    }\n  ],\n  \"@type\": \"Set\",\n  \"permission\": [\n    {\n      \"action\": \"use\",\n      \"constraint\": {\n        \"leftOperand\": \"ex:hasCredentialType\",\n        \"operator\": \"eq\",\n        \"rightOperand\": \"ex:TrustedParticipantCredential\"\n      }\n    }\n  ]\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "Eclipse EDC example",
+      "description": "Starter example for Eclipse EDC-style policy payloads. Adapt operands and policy bindings to the connector configuration.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/patterns/access-by-participant-credential/examples/edc-example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/patterns/access-by-participant-credential/example_2_1.json",
+          "sizeBytes": 356,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"ex\": \"https://example.org/policy/\"\n    }\n  ],\n  \"@type\": \"Set\",\n  \"permission\": [\n    {\n      \"action\": \"use\",\n      \"constraint\": {\n        \"leftOperand\": \"ex:hasCredentialType\",\n        \"operator\": \"eq\",\n        \"rightOperand\": \"ex:TrustedParticipantCredential\"\n      }\n    }\n  ]\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "TNO TSG example",
+      "description": "Starter example for TNO TSG-style policy payloads. Adapt operands and rule templates to the connector configuration.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/patterns/access-by-participant-credential/examples/tsg-example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/patterns/access-by-participant-credential/example_3_1.json",
+          "sizeBytes": 356,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"ex\": \"https://example.org/policy/\"\n    }\n  ],\n  \"@type\": \"Set\",\n  \"permission\": [\n    {\n      \"action\": \"use\",\n      \"constraint\": {\n        \"leftOperand\": \"ex:hasCredentialType\",\n        \"operator\": \"eq\",\n        \"rightOperand\": \"ex:TrustedParticipantCredential\"\n      }\n    }\n  ]\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/patterns/access-by-participant-credential/schema.json\ntitle: Access by Participant Credential\n$ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.yaml\n"
+}

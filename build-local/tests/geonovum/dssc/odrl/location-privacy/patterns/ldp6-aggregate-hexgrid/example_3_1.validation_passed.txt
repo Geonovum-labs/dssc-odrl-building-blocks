@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.patterns.ldp6-aggregate-hexgrid - LDP6 Aggregate to Hexagonal Grid
+Generated 2026-07-10T12:32:54.963689+00:00
+=== Files ===
+Using examples/lpp-example.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

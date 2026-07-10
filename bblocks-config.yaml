@@ -1,0 +1,19 @@
+identifier-prefix: nl.geonovum.dssc.
+name: DSSC Dataspace ODRL Policy Building Blocks
+description: >
+  Building blocks for ODRL-based access and usage policies as exchanged
+  through the Dataspace Protocol and used by dataspace connectors such as
+  Eclipse EDC and TNO TSG.
+imports:
+  - default
+metadata:
+  publisher: Geonovum
+  scope: >
+    Experimental profile of ODRL policy structures, constraints and
+    reusable policy patterns for DSSC-aligned dataspaces.
+  status: draft
+  version: 0.1.0
+  governance: >
+    Draft register for experimentation. Inclusion requires a documented
+    policy use case, at least one positive example, and explicit notes on
+    connector compatibility.

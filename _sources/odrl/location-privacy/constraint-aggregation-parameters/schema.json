@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/location-privacy/constraint-aggregation-parameters/schema.json",
+  "title": "Aggregation Parameter Constraints",
+  "type": "array",
+  "minItems": 2,
+  "items": {
+    "$ref": "../../constraint-atomic/schema.json"
+  }
+}

@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.action-pseudonymize-location - Location Privacy Pseudonymize Location Action
+Generated 2026-07-10T12:32:54.302687+00:00
+=== Files ===
+Using action.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

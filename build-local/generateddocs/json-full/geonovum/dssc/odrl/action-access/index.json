@@ -1,0 +1,66 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.action-access",
+  "name": "Dataspace Access Action",
+  "abstract": "The access action pattern for access policies and offer visibility.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [],
+  "tags": [
+    "ODRL",
+    "action",
+    "access"
+  ],
+  "sources": [
+    {
+      "title": "DSSC Blueprint - Access & Usage Policies Enforcement",
+      "link": "https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement"
+    },
+    {
+      "title": "Eclipse Tractus-X Connector Kit - Working with Policies",
+      "link": "https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/"
+    },
+    {
+      "title": "TNO Security Gateway - Policy Enforcement Framework",
+      "link": "https://tno-tsg.gitlab.io/docs/core-container/pef/"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/action-access/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/action-access/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/action-access/schema.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/action-access/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/action-access/tests/action.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/action-access/tests/wrong-action-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Dataspace Access Action",
+      "description": "The access action pattern for access policies and offer visibility.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/action-access/examples/action.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/action-access/example_1_1.json",
+          "sizeBytes": 9,
+          "code": "\"access\"\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/action-access/schema.json\ntitle: Dataspace Access Action\noneOf:\n- const: access\n- type: object\n  required:\n  - '@id'\n  properties:\n    '@id':\n      const: access\n  additionalProperties: true\n"
+}

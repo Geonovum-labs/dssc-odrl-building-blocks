@@ -1,0 +1,7 @@
+examples:
+  - title: Geofence credential subject
+    description: >
+      Credential subject containing a geofence URL and SHA-256 hash.
+    snippets:
+      - language: json
+        ref: examples/geofence-credential-subject.json

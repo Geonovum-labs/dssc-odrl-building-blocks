@@ -1,0 +1,7 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/building-blocks/odrl/location-privacy/constraint-geofence-vc-present/schema.json
+title: Geofence Credential Presence Constraints
+type: array
+minItems: 2
+items:
+  $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml

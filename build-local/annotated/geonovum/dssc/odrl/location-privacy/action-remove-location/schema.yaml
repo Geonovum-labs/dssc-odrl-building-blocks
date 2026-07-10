@@ -1,0 +1,12 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/building-blocks/odrl/location-privacy/action-remove-location/schema.json
+title: Location Privacy Remove Location Action
+oneOf:
+- const: lp:removeLocation
+- type: object
+  required:
+  - '@id'
+  properties:
+    '@id':
+      const: lp:removeLocation
+  additionalProperties: true

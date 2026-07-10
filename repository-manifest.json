@@ -1,0 +1,414 @@
+[
+  {
+    "block": "odrl/action-access",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/action.json"
+    ],
+    "tests": [
+      "tests/action.json",
+      "tests/wrong-action-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/action-use",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/action.json"
+    ],
+    "tests": [
+      "tests/action.json",
+      "tests/wrong-action-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/agreement",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/simple.json"
+    ],
+    "tests": [
+      "tests/missing-type-fail.json",
+      "tests/no-rule-fail.json",
+      "tests/simple.json"
+    ]
+  },
+  {
+    "block": "odrl/constraint-atomic",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/purpose-eq.json"
+    ],
+    "tests": [
+      "tests/missing-right-operand-fail.json",
+      "tests/purpose-eq.json",
+      "tests/unsupported-operator-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/constraint-logical",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/purpose-and-role.json"
+    ],
+    "tests": [
+      "tests/empty-and-fail.json",
+      "tests/no-logical-operator-fail.json",
+      "tests/purpose-and-role.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/action-aggregate",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/action.json"
+    ],
+    "tests": [
+      "tests/action.json",
+      "tests/wrong-action-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/action-pseudonymize-location",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/action.json"
+    ],
+    "tests": [
+      "tests/action.json",
+      "tests/wrong-action-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/action-reduce-accuracy",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/action.json"
+    ],
+    "tests": [
+      "tests/action.json",
+      "tests/wrong-action-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/action-remove-location",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/action.json"
+    ],
+    "tests": [
+      "tests/action.json",
+      "tests/wrong-action-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/action-remove-sensitive-attributes",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/action.json"
+    ],
+    "tests": [
+      "tests/action.json",
+      "tests/wrong-action-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/action-within-geofence",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/action.json"
+    ],
+    "tests": [
+      "tests/action.json",
+      "tests/wrong-action-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/constraint-aggregation-parameters",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-constraint-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/constraint-geofence-filter",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-constraint-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/constraint-geofence-vc-present",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-constraint-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/constraint-positional-accuracy",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-constraint-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/geofence-credential-reference",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/geofence-credential-subject.json"
+    ],
+    "tests": [
+      "tests/bad-hash-fail.json",
+      "tests/geofence-credential-subject.json",
+      "tests/missing-hash-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/patterns/ldp1-geofence-vc-required",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/lpp-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-location-policy-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/patterns/ldp1-within-geofence",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/lpp-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-location-policy-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/patterns/ldp2-degrade-sensitive-attributes",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/lpp-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-location-policy-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/patterns/ldp3-remove-location",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/lpp-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-location-policy-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/patterns/ldp4-pseudonymize-location",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/lpp-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-location-policy-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/patterns/ldp5-reduce-positional-accuracy",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/lpp-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-location-policy-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/location-privacy/patterns/ldp6-aggregate-hexgrid",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/lpp-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-location-policy-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/obligation",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/simple.json"
+    ],
+    "tests": [
+      "tests/missing-action-fail.json",
+      "tests/simple.json"
+    ]
+  },
+  {
+    "block": "odrl/offer",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/simple.json"
+    ],
+    "tests": [
+      "tests/missing-type-fail.json",
+      "tests/no-rule-fail.json",
+      "tests/simple.json"
+    ]
+  },
+  {
+    "block": "odrl/patterns/access-by-participant-credential",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/tsg-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-pattern-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/patterns/no-redistribution",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/tsg-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-pattern-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/patterns/purpose-limitation",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/tsg-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-pattern-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/patterns/time-limited-use",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/edc-example.json",
+      "examples/example.json",
+      "examples/tsg-example.json"
+    ],
+    "tests": [
+      "tests/example.json",
+      "tests/invalid-pattern-fail.json"
+    ]
+  },
+  {
+    "block": "odrl/permission",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/simple.json"
+    ],
+    "tests": [
+      "tests/missing-action-fail.json",
+      "tests/simple.json"
+    ]
+  },
+  {
+    "block": "odrl/policy-set",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/simple.json"
+    ],
+    "tests": [
+      "tests/missing-type-fail.json",
+      "tests/no-rule-fail.json",
+      "tests/simple.json"
+    ]
+  },
+  {
+    "block": "odrl/prohibition",
+    "has_examples_yaml": true,
+    "has_tests_yaml": true,
+    "examples": [
+      "examples/simple.json"
+    ],
+    "tests": [
+      "tests/missing-action-fail.json",
+      "tests/simple.json"
+    ]
+  }
+]

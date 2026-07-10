@@ -1,0 +1,8 @@
+examples:
+  - title: Location Privacy Reduce Positional Accuracy Action
+    description: >
+      Action indicating that the spatial reference must be generalized or degraded
+      to a lower positional accuracy or resolution.
+    snippets:
+      - language: json
+        ref: examples/action.json

@@ -1,0 +1,77 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.policy-set",
+  "name": "ODRL Policy Set for Dataspace Protocol",
+  "abstract": "A constrained ODRL Set profile for policies exchanged through the Dataspace Protocol.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.constraint-atomic",
+    "nl.geonovum.dssc.odrl.prohibition",
+    "nl.geonovum.dssc.odrl.permission",
+    "nl.geonovum.dssc.odrl.obligation"
+  ],
+  "tags": [
+    "ODRL",
+    "Dataspace Protocol",
+    "JSON-LD",
+    "policy-set"
+  ],
+  "sources": [
+    {
+      "title": "DSSC Blueprint - Access & Usage Policies Enforcement",
+      "link": "https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement"
+    },
+    {
+      "title": "Eclipse Tractus-X Connector Kit - Working with Policies",
+      "link": "https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/"
+    },
+    {
+      "title": "TNO Security Gateway - Policy Enforcement Framework",
+      "link": "https://tno-tsg.gitlab.io/docs/core-container/pef/"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/policy-set/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/policy-set/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/policy-set/tests/simple.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/policy-set/tests/missing-type-fail.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/policy-set/tests/no-rule-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "ODRL Policy Set for Dataspace Protocol",
+      "description": "A constrained ODRL Set profile for policies exchanged through the Dataspace Protocol.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/policy-set/examples/simple.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/policy-set/example_1_1.json",
+          "sizeBytes": 326,
+          "code": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/odrl.jsonld\",\n    {\n      \"ex\": \"https://example.org/policy/\"\n    }\n  ],\n  \"@type\": \"Set\",\n  \"permission\": [\n    {\n      \"action\": \"use\",\n      \"constraint\": {\n        \"leftOperand\": \"ex:purpose\",\n        \"operator\": \"eq\",\n        \"rightOperand\": \"ex:Research\"\n      }\n    }\n  ]\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/policy-set/schema.json\ntitle: ODRL Policy Set for Dataspace Protocol\ntype: object\nrequired:\n- '@type'\nproperties:\n  '@context':\n    oneOf:\n    - type: string\n    - type: object\n    - type: array\n      items:\n        oneOf:\n        - type: string\n        - type: object\n  '@id':\n    type: string\n  '@type':\n    oneOf:\n    - const: Set\n    - const: odrl:Set\n  profile:\n    type: string\n  target:\n    oneOf:\n    - type: string\n    - type: array\n      items:\n        type: string\n  assigner:\n    type: string\n  assignee:\n    type: string\n  permission:\n    type: array\n    items:\n      $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/permission/schema.yaml\n  prohibition:\n    type: array\n    items:\n      $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/prohibition/schema.yaml\n  obligation:\n    type: array\n    items:\n      $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml\nanyOf:\n- required:\n  - permission\n- required:\n  - prohibition\n- required:\n  - obligation\nadditionalProperties: true\n"
+}

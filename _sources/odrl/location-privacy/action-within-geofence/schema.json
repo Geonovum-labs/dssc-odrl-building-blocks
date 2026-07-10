@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/location-privacy/action-within-geofence/schema.json",
+  "title": "Location Privacy Within Geofence Action",
+  "oneOf": [
+    {
+      "const": "lp:withinGeofence"
+    },
+    {
+      "type": "object",
+      "required": [
+        "@id"
+      ],
+      "properties": {
+        "@id": {
+          "const": "lp:withinGeofence"
+        }
+      },
+      "additionalProperties": true
+    }
+  ]
+}

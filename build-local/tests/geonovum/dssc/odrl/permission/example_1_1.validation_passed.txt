@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.permission - ODRL Permission Rule
+Generated 2026-07-10T12:32:54.497055+00:00
+=== Files ===
+Using examples/simple.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

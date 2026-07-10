@@ -1,0 +1,5 @@
+- ref: tests/simple.json
+- ref: tests/missing-type-fail.json
+  require-fail: true
+- ref: tests/no-rule-fail.json
+  require-fail: true

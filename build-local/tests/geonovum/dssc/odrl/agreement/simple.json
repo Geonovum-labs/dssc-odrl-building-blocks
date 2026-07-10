@@ -1,0 +1,20 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/odrl.jsonld",
+    {
+      "ex": "https://example.org/policy/"
+    }
+  ],
+  "@type": "Agreement",
+  "permission": [
+    {
+      "action": "use",
+      "constraint": {
+        "leftOperand": "ex:purpose",
+        "operator": "eq",
+        "rightOperand": "ex:Research"
+      }
+    }
+  ],
+  "target": "urn:example:dataset:1"
+}

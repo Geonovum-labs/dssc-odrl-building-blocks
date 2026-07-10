@@ -1,0 +1,7 @@
+examples:
+  - title: Purpose and role logical constraint
+    description: >
+      Combination of multiple constraints using logical AND.
+    snippets:
+      - language: json
+        ref: examples/purpose-and-role.json

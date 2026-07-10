@@ -1,0 +1,16 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.patterns.ldp1-geofence-vc-required - LDP1 Geofence Credential Required
+Generated 2026-07-10T12:32:54.658149+00:00
+=== General ===
+
+** Validation error **
+Test was expected to fail but it did not.
+=== End General ===
+
+=== Files ===
+Using invalid-location-policy-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

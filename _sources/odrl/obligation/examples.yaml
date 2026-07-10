@@ -1,0 +1,7 @@
+examples:
+  - title: ODRL Obligation / Duty Rule
+    description: >
+      An obligation or duty rule expressing an action that must be fulfilled.
+    snippets:
+      - language: json
+        ref: examples/simple.json

@@ -1,0 +1,8 @@
+examples:
+  - title: Location Privacy Pseudonymize Location Action
+    description: >
+      Action indicating that the spatial reference must be pseudonymized before
+      transfer.
+    snippets:
+      - language: json
+        ref: examples/action.json

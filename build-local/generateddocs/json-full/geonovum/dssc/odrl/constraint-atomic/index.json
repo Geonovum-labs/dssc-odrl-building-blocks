@@ -1,0 +1,71 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.constraint-atomic",
+  "name": "ODRL Atomic Constraint",
+  "abstract": "A basic ODRL constraint with left operand, operator and right operand.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [],
+  "tags": [
+    "ODRL",
+    "constraint",
+    "Dataspace Protocol"
+  ],
+  "sources": [
+    {
+      "title": "DSSC Blueprint - Access & Usage Policies Enforcement",
+      "link": "https://toolbox.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement"
+    },
+    {
+      "title": "Eclipse Tractus-X Connector Kit - Working with Policies",
+      "link": "https://eclipse-tractusx.github.io/docs-kits/kits/connector-kit/adoption-view/working-with-policies/"
+    },
+    {
+      "title": "TNO Security Gateway - Policy Enforcement Framework",
+      "link": "https://tno-tsg.gitlab.io/docs/core-container/pef/"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/constraint-atomic/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/constraint-atomic/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/constraint-atomic/tests/purpose-eq.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/constraint-atomic/tests/missing-right-operand-fail.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/constraint-atomic/tests/unsupported-operator-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Atomic purpose constraint",
+      "description": "Basic ODRL constraint using leftOperand, operator and rightOperand.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/constraint-atomic/examples/purpose-eq.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/constraint-atomic/example_1_1.json",
+          "sizeBytes": 87,
+          "code": "{\n  \"leftOperand\": \"ex:purpose\",\n  \"operator\": \"eq\",\n  \"rightOperand\": \"ex:Research\"\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/constraint-atomic/schema.json\ntitle: ODRL Atomic Constraint\ntype: object\nrequired:\n- leftOperand\n- operator\nproperties:\n  leftOperand:\n    type: string\n  operator:\n    type: string\n    enum:\n    - eq\n    - neq\n    - gt\n    - gteq\n    - lt\n    - lteq\n    - isAnyOf\n    - isAllOf\n    - isNoneOf\n    - gte\n    - lte\n    - isPartOf\n  rightOperand: {}\n  rightOperandReference:\n    type: string\n  unit:\n    type: string\n  dataType:\n    type: string\noneOf:\n- required:\n  - rightOperand\n- required:\n  - rightOperandReference\nadditionalProperties: true\n"
+}

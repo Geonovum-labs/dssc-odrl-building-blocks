@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.constraint-positional-accuracy - Positional Accuracy Constraint
+Generated 2026-07-10T12:32:54.446762+00:00
+=== Files ===
+Using example.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

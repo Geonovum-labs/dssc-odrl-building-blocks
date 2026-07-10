@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.location-privacy.constraint-geofence-filter",
+  "name": "Geofence Filter Constraint",
+  "abstract": "ODRL constraint describing the filter expression used to select or verify features against the consumer geofence.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.constraint-atomic"
+  ],
+  "tags": [
+    "ODRL",
+    "location privacy",
+    "constraint"
+  ],
+  "sources": [
+    {
+      "title": "Using Sensitive Location Data to its Full Potential - wetransform",
+      "link": "https://wetransform.to/news-and-events/sensitive-location-data-full-potential/"
+    },
+    {
+      "title": "ODRL Information Model 2.2",
+      "link": "https://www.w3.org/TR/odrl-model/"
+    },
+    {
+      "title": "ODRL V2.2 Implementation Best Practices",
+      "link": "https://w3c.github.io/odrl/bp/"
+    },
+    {
+      "title": "SAGE WP2 Meeting - Location Data Policies in the EDC",
+      "link": "urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-filter/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-filter/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-filter/tests/example.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-filter/tests/invalid-constraint-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Geofence Filter Constraint",
+      "description": "ODRL constraint describing the filter expression used to select or verify features against the consumer geofence.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-geofence-filter/examples/example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/constraint-geofence-filter/example_1_1.json",
+          "sizeBytes": 139,
+          "code": "{\n  \"leftOperand\": \"lp:geofenceFilter\",\n  \"operator\": \"isPartOf\",\n  \"rightOperand\": \"$.features[?(@.geometry.passesConsumerGeofence())]\"\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/location-privacy/constraint-geofence-filter/schema.json\ntitle: Geofence Filter Constraint\ntype: object\nrequired:\n- leftOperand\n- operator\n- rightOperand\nproperties:\n  leftOperand:\n    const: lp:geofenceFilter\n  operator:\n    enum:\n    - isPartOf\n    - odrl:isPartOf\n  rightOperand:\n    type: string\nadditionalProperties: true\n"
+}

@@ -1,0 +1,46 @@
+Validation report for nl.geonovum.dssc.odrl.obligation - ODRL Obligation / Duty Rule
+Generated 2026-07-10T12:32:54.470623+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using missing-action-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'action' is a required property
+
+Failed validating 'required' in schema:
+    {'$id': 'https://example.org/building-blocks/odrl/obligation/schema.json',
+     '$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'additionalProperties': True,
+     'properties': {'@id': {'type': 'string'},
+                    'action': {'oneOf': [{'type': 'string'},
+                                         {'additionalProperties': True,
+                                          'properties': {'@id': {'type': 'string'}},
+                                          'required': ['@id'],
+                                          'type': 'object'}]},
+                    'constraint': {'oneOf': [{'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml'},
+                                                        {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml'}]},
+                                             {'items': {'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml'},
+                                                                  {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml'}]},
+                                              'type': 'array'}]},
+                    'duty': {'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},
+                                       {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},
+                                        'type': 'array'}]},
+                    'target': {'oneOf': [{'type': 'string'},
+                                         {'items': {'type': 'string'},
+                                          'type': 'array'}]}},
+     'required': ['action'],
+     'title': 'ODRL Obligation / Duty Rule',
+     'type': 'object'}
+
+On instance:
+    {'constraint': {'leftOperand': 'ex:purpose',
+                    'operator': 'eq',
+                    'rightOperand': 'ex:Research'}}
+=== End JSON Schema ===
+

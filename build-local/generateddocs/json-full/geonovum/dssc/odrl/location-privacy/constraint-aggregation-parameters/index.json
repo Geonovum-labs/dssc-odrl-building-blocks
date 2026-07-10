@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "nl.geonovum.dssc.odrl.location-privacy.constraint-aggregation-parameters",
+  "name": "Aggregation Parameter Constraints",
+  "abstract": "ODRL constraints defining the location aggregation algorithm and minimum grid resolution or anonymity parameter.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-10T00:00:00Z",
+  "itemClass": "schema",
+  "register": "DSSC Dataspace ODRL Policy Building Blocks",
+  "version": "0.1.0",
+  "dependsOn": [
+    "nl.geonovum.dssc.odrl.constraint-atomic"
+  ],
+  "tags": [
+    "ODRL",
+    "location privacy",
+    "constraint"
+  ],
+  "sources": [
+    {
+      "title": "Using Sensitive Location Data to its Full Potential - wetransform",
+      "link": "https://wetransform.to/news-and-events/sensitive-location-data-full-potential/"
+    },
+    {
+      "title": "ODRL Information Model 2.2",
+      "link": "https://www.w3.org/TR/odrl-model/"
+    },
+    {
+      "title": "ODRL V2.2 Implementation Best Practices",
+      "link": "https://w3c.github.io/odrl/bp/"
+    },
+    {
+      "title": "SAGE WP2 Meeting - Location Data Policies in the EDC",
+      "link": "urn:local:SAGE-WP2-Meeting-Location-Data-Policies-in-the-EDC.pdf"
+    }
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-07-10",
+  "schema": {
+    "application/yaml": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-aggregation-parameters/schema.yaml",
+    "application/json": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-aggregation-parameters/schema.json"
+  },
+  "sourceSchema": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-aggregation-parameters/schema.json",
+  "resolvedSchemaProperties": "http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/location-privacy/constraint-aggregation-parameters/resolvedProperties.json",
+  "sourceFiles": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-aggregation-parameters/",
+  "testResources": [
+    {
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-aggregation-parameters/tests/example.json"
+    },
+    {
+      "require-fail": true,
+      "url": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-aggregation-parameters/tests/invalid-constraint-fail.json"
+    }
+  ],
+  "validationPassed": true,
+  "examples": [
+    {
+      "title": "Aggregation Parameter Constraints",
+      "description": "ODRL constraints defining the location aggregation algorithm and minimum grid resolution or anonymity parameter.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "http://localhost:9090/register/_sources/odrl/location-privacy/constraint-aggregation-parameters/examples/example.json",
+          "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/constraint-aggregation-parameters/example_1_1.json",
+          "sizeBytes": 190,
+          "code": "[\n  {\n    \"leftOperand\": \"lp:algo\",\n    \"operator\": \"eq\",\n    \"rightOperand\": \"lp:HexGridAgg\"\n  },\n  {\n    \"leftOperand\": \"lp:hexGridRes\",\n    \"operator\": \"gte\",\n    \"rightOperand\": 8\n  }\n]\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$id: https://example.org/building-blocks/odrl/location-privacy/constraint-aggregation-parameters/schema.json\ntitle: Aggregation Parameter Constraints\ntype: array\nminItems: 2\nitems:\n  $ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml\n"
+}

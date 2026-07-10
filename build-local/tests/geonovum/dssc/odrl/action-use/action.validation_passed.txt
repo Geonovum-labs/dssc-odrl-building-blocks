@@ -1,0 +1,10 @@
+Validation report for nl.geonovum.dssc.odrl.action-use - ODRL Use Action
+Generated 2026-07-10T12:32:54.244041+00:00
+=== Files ===
+Using action.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

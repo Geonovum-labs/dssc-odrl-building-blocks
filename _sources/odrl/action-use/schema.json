@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/action-use/schema.json",
+  "title": "ODRL Use Action",
+  "oneOf": [
+    {
+      "const": "use"
+    },
+    {
+      "type": "object",
+      "required": [
+        "@id"
+      ],
+      "properties": {
+        "@id": {
+          "const": "use"
+        }
+      },
+      "additionalProperties": true
+    }
+  ]
+}

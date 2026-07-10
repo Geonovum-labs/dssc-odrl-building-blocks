@@ -1,0 +1,4 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/building-blocks/odrl/patterns/access-by-participant-credential/schema.json
+title: Access by Participant Credential
+$ref: http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/policy-set/schema.yaml

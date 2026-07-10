@@ -1,0 +1,22 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.constraint-positional-accuracy - Positional Accuracy Constraint
+Generated 2026-07-10T12:32:54.447666+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using invalid-constraint-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 0 is less than or equal to the minimum of 0
+
+Failed validating 'exclusiveMinimum' in schema['properties']['rightOperand']:
+    {'exclusiveMinimum': 0, 'type': 'number'}
+
+On instance['rightOperand']:
+    0
+=== End JSON Schema ===
+

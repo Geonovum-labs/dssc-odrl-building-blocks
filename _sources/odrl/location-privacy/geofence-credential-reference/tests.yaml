@@ -1,0 +1,5 @@
+- ref: tests/geofence-credential-subject.json
+- ref: tests/missing-hash-fail.json
+  require-fail: true
+- ref: tests/bad-hash-fail.json
+  require-fail: true

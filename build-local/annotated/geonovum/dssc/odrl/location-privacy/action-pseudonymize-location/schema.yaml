@@ -1,0 +1,12 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/building-blocks/odrl/location-privacy/action-pseudonymize-location/schema.json
+title: Location Privacy Pseudonymize Location Action
+oneOf:
+- const: lp:pseudonymizeLocation
+- type: object
+  required:
+  - '@id'
+  properties:
+    '@id':
+      const: lp:pseudonymizeLocation
+  additionalProperties: true

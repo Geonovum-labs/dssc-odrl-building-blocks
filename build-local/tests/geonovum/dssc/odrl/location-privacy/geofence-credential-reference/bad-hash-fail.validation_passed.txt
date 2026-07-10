@@ -1,0 +1,22 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.geofence-credential-reference - Participant Geofence Credential Reference
+Generated 2026-07-10T12:32:54.278413+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using bad-hash-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'not-a-sha256' does not match '^[A-Fa-f0-9]{64}$'
+
+Failed validating 'pattern' in schema['properties']['credentialSubject']['properties']['geofence']['properties']['hash']:
+    {'pattern': '^[A-Fa-f0-9]{64}$', 'type': 'string'}
+
+On instance['credentialSubject']['geofence']['hash']:
+    'not-a-sha256'
+=== End JSON Schema ===
+

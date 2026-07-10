@@ -1,0 +1,29 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.action-remove-location - Location Privacy Remove Location Action
+Generated 2026-07-10T12:32:54.331110+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using wrong-action-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'lp:wrongremoveLocation' is not valid under any of the given schemas
+
+Failed validating 'oneOf' in schema:
+    {'$id': 'https://example.org/building-blocks/odrl/location-privacy/action-remove-location/schema.json',
+     '$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'oneOf': [{'const': 'lp:removeLocation'},
+               {'additionalProperties': True,
+                'properties': {'@id': {'const': 'lp:removeLocation'}},
+                'required': ['@id'],
+                'type': 'object'}],
+     'title': 'Location Privacy Remove Location Action'}
+
+On instance:
+    'lp:wrongremoveLocation'
+=== End JSON Schema ===
+

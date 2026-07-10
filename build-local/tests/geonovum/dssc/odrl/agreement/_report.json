@@ -1,0 +1,307 @@
+{
+  "title": "Validation report for nl.geonovum.dssc.odrl.agreement - ODRL Agreement for Dataspace Protocol",
+  "bblockName": "ODRL Agreement for Dataspace Protocol",
+  "bblockId": "nl.geonovum.dssc.odrl.agreement",
+  "generated": "2026-07-10T12:32:54.550525+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/agreement/tests/missing-type-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/agreement/tests/missing-type-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-type-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'@type' is a required property",
+              "isError": true,
+              "message": "ValidationError: '@type' is a required property\n\nFailed validating 'required' in schema:\n    {'$id': 'https://example.org/building-blocks/odrl/agreement/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'additionalProperties': True,\n     'anyOf': [{'required': ['permission']},\n               {'required': ['prohibition']},\n               {'required': ['obligation']}],\n     'properties': {'@context': {'oneOf': [{'type': 'string'},\n                                           {'type': 'object'},\n                                           {'items': {'oneOf': [{'type': 'string'},\n                                                                {'type': 'object'}]},\n                                            'type': 'array'}]},\n                    '@id': {'type': 'string'},\n                    '@type': {'oneOf': [{'const': 'Agreement'},\n                                        {'const': 'odrl:Agreement'}]},\n                    'assignee': {'type': 'string'},\n                    'assigner': {'type': 'string'},\n                    'obligation': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},\n                                   'type': 'array'},\n                    'permission': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/permission/schema.yaml'},\n                                   'type': 'array'},\n                    'profile': {'type': 'string'},\n                    'prohibition': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/prohibition/schema.yaml'},\n                                    'type': 'array'},\n                    'target': {'oneOf': [{'type': 'string'},\n                                         {'items': {'type': 'string'},\n                                          'type': 'array'}]}},\n     'required': ['@type'],\n     'title': 'ODRL Agreement for Dataspace Protocol',\n     'type': 'object'}\n\nOn instance:\n    {'@context': ['https://www.w3.org/ns/odrl.jsonld',\n                  {'ex': 'https://example.org/policy/'}],\n     'permission': [{'action': 'use',\n                     'constraint': {'leftOperand': 'ex:purpose',\n                                    'operator': 'eq',\n                                    'rightOperand': 'ex:Research'}}],\n     'target': 'urn:example:dataset:1'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/agreement/tests/no-rule-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/agreement/tests/no-rule-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using no-rule-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "{'@type': 'Agreement'} is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: {'@type': 'Agreement'} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'$id': 'https://example.org/building-blocks/odrl/agreement/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'additionalProperties': True,\n     'anyOf': [{'required': ['permission']},\n               {'required': ['prohibition']},\n               {'required': ['obligation']}],\n     'properties': {'@context': {'oneOf': [{'type': 'string'},\n                                           {'type': 'object'},\n                                           {'items': {'oneOf': [{'type': 'string'},\n                                                                {'type': 'object'}]},\n                                            'type': 'array'}]},\n                    '@id': {'type': 'string'},\n                    '@type': {'oneOf': [{'const': 'Agreement'},\n                                        {'const': 'odrl:Agreement'}]},\n                    'assignee': {'type': 'string'},\n                    'assigner': {'type': 'string'},\n                    'obligation': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},\n                                   'type': 'array'},\n                    'permission': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/permission/schema.yaml'},\n                                   'type': 'array'},\n                    'profile': {'type': 'string'},\n                    'prohibition': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/prohibition/schema.yaml'},\n                                    'type': 'array'},\n                    'target': {'oneOf': [{'type': 'string'},\n                                         {'items': {'type': 'string'},\n                                          'type': 'array'}]}},\n     'required': ['@type'],\n     'title': 'ODRL Agreement for Dataspace Protocol',\n     'type': 'object'}\n\nOn instance:\n    {'@type': 'Agreement'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/agreement/tests/simple.json",
+        "url": "http://localhost:9090/register/_sources/odrl/agreement/tests/simple.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using simple.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/agreement/tests/simple.json",
+        "url": "http://localhost:9090/register/_sources/odrl/agreement/tests/simple.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using simple.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/agreement/tests/missing-type-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/agreement/tests/missing-type-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-type-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'@type' is a required property",
+              "isError": true,
+              "message": "ValidationError: '@type' is a required property\n\nFailed validating 'required' in schema:\n    {'$id': 'https://example.org/building-blocks/odrl/agreement/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'additionalProperties': True,\n     'anyOf': [{'required': ['permission']},\n               {'required': ['prohibition']},\n               {'required': ['obligation']}],\n     'properties': {'@context': {'oneOf': [{'type': 'string'},\n                                           {'type': 'object'},\n                                           {'items': {'oneOf': [{'type': 'string'},\n                                                                {'type': 'object'}]},\n                                            'type': 'array'}]},\n                    '@id': {'type': 'string'},\n                    '@type': {'oneOf': [{'const': 'Agreement'},\n                                        {'const': 'odrl:Agreement'}]},\n                    'assignee': {'type': 'string'},\n                    'assigner': {'type': 'string'},\n                    'obligation': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},\n                                   'type': 'array'},\n                    'permission': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/permission/schema.yaml'},\n                                   'type': 'array'},\n                    'profile': {'type': 'string'},\n                    'prohibition': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/prohibition/schema.yaml'},\n                                    'type': 'array'},\n                    'target': {'oneOf': [{'type': 'string'},\n                                         {'items': {'type': 'string'},\n                                          'type': 'array'}]}},\n     'required': ['@type'],\n     'title': 'ODRL Agreement for Dataspace Protocol',\n     'type': 'object'}\n\nOn instance:\n    {'@context': ['https://www.w3.org/ns/odrl.jsonld',\n                  {'ex': 'https://example.org/policy/'}],\n     'permission': [{'action': 'use',\n                     'constraint': {'leftOperand': 'ex:purpose',\n                                    'operator': 'eq',\n                                    'rightOperand': 'ex:Research'}}],\n     'target': 'urn:example:dataset:1'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/agreement/tests/no-rule-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/agreement/tests/no-rule-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using no-rule-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "{'@type': 'Agreement'} is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: {'@type': 'Agreement'} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'$id': 'https://example.org/building-blocks/odrl/agreement/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'additionalProperties': True,\n     'anyOf': [{'required': ['permission']},\n               {'required': ['prohibition']},\n               {'required': ['obligation']}],\n     'properties': {'@context': {'oneOf': [{'type': 'string'},\n                                           {'type': 'object'},\n                                           {'items': {'oneOf': [{'type': 'string'},\n                                                                {'type': 'object'}]},\n                                            'type': 'array'}]},\n                    '@id': {'type': 'string'},\n                    '@type': {'oneOf': [{'const': 'Agreement'},\n                                        {'const': 'odrl:Agreement'}]},\n                    'assignee': {'type': 'string'},\n                    'assigner': {'type': 'string'},\n                    'obligation': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},\n                                   'type': 'array'},\n                    'permission': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/permission/schema.yaml'},\n                                   'type': 'array'},\n                    'profile': {'type': 'string'},\n                    'prohibition': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/prohibition/schema.yaml'},\n                                    'type': 'array'},\n                    'target': {'oneOf': [{'type': 'string'},\n                                         {'items': {'type': 'string'},\n                                          'type': 'array'}]}},\n     'required': ['@type'],\n     'title': 'ODRL Agreement for Dataspace Protocol',\n     'type': 'object'}\n\nOn instance:\n    {'@type': 'Agreement'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/agreement/example_1_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/agreement/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/simple.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0
+  }
+}

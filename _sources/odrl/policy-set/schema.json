@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/policy-set/schema.json",
+  "title": "ODRL Policy Set for Dataspace Protocol",
+  "type": "object",
+  "required": [
+    "@type"
+  ],
+  "properties": {
+    "@context": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        },
+        {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "@id": {
+      "type": "string"
+    },
+    "@type": {
+      "oneOf": [
+        {
+          "const": "Set"
+        },
+        {
+          "const": "odrl:Set"
+        }
+      ]
+    },
+    "profile": {
+      "type": "string"
+    },
+    "target": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "assigner": {
+      "type": "string"
+    },
+    "assignee": {
+      "type": "string"
+    },
+    "permission": {
+      "type": "array",
+      "items": {
+        "$ref": "../permission/schema.json"
+      }
+    },
+    "prohibition": {
+      "type": "array",
+      "items": {
+        "$ref": "../prohibition/schema.json"
+      }
+    },
+    "obligation": {
+      "type": "array",
+      "items": {
+        "$ref": "../obligation/schema.json"
+      }
+    }
+  },
+  "anyOf": [
+    {
+      "required": [
+        "permission"
+      ]
+    },
+    {
+      "required": [
+        "prohibition"
+      ]
+    },
+    {
+      "required": [
+        "obligation"
+      ]
+    }
+  ],
+  "additionalProperties": true
+}

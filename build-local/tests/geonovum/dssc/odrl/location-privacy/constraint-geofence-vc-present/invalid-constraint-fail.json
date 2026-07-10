@@ -1,0 +1,7 @@
+[
+  {
+    "leftOperand": "geofence:credentialSubject.geofence.URL",
+    "operator": "eq",
+    "rightOperand": null
+  }
+]

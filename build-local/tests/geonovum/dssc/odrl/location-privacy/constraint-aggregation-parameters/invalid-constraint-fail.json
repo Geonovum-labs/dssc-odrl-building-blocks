@@ -1,0 +1,7 @@
+[
+  {
+    "leftOperand": "lp:algo",
+    "operator": "contains",
+    "rightOperand": "lp:HexGridAgg"
+  }
+]

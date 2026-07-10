@@ -1,0 +1,50 @@
+Validation report for nl.geonovum.dssc.odrl.agreement - ODRL Agreement for Dataspace Protocol
+Generated 2026-07-10T12:32:54.549076+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using no-rule-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: {'@type': 'Agreement'} is not valid under any of the given schemas
+
+Failed validating 'anyOf' in schema:
+    {'$id': 'https://example.org/building-blocks/odrl/agreement/schema.json',
+     '$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'additionalProperties': True,
+     'anyOf': [{'required': ['permission']},
+               {'required': ['prohibition']},
+               {'required': ['obligation']}],
+     'properties': {'@context': {'oneOf': [{'type': 'string'},
+                                           {'type': 'object'},
+                                           {'items': {'oneOf': [{'type': 'string'},
+                                                                {'type': 'object'}]},
+                                            'type': 'array'}]},
+                    '@id': {'type': 'string'},
+                    '@type': {'oneOf': [{'const': 'Agreement'},
+                                        {'const': 'odrl:Agreement'}]},
+                    'assignee': {'type': 'string'},
+                    'assigner': {'type': 'string'},
+                    'obligation': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/obligation/schema.yaml'},
+                                   'type': 'array'},
+                    'permission': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/permission/schema.yaml'},
+                                   'type': 'array'},
+                    'profile': {'type': 'string'},
+                    'prohibition': {'items': {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/prohibition/schema.yaml'},
+                                    'type': 'array'},
+                    'target': {'oneOf': [{'type': 'string'},
+                                         {'items': {'type': 'string'},
+                                          'type': 'array'}]}},
+     'required': ['@type'],
+     'title': 'ODRL Agreement for Dataspace Protocol',
+     'type': 'object'}
+
+On instance:
+    {'@type': 'Agreement'}
+=== End JSON Schema ===
+

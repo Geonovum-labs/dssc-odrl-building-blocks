@@ -1,0 +1,7 @@
+examples:
+  - title: ODRL Prohibition Rule
+    description: >
+      A prohibition rule disallowing an action under optional constraints.
+    snippets:
+      - language: json
+        ref: examples/simple.json

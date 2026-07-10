@@ -1,0 +1,307 @@
+{
+  "title": "Validation report for nl.geonovum.dssc.odrl.constraint-atomic - ODRL Atomic Constraint",
+  "bblockName": "ODRL Atomic Constraint",
+  "bblockId": "nl.geonovum.dssc.odrl.constraint-atomic",
+  "generated": "2026-07-10T12:32:54.262048+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/constraint-atomic/tests/missing-right-operand-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/constraint-atomic/tests/missing-right-operand-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-right-operand-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "{'leftOperand': 'ex:purpose', 'operator': 'eq'} is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: {'leftOperand': 'ex:purpose', 'operator': 'eq'} is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema:\n    {'$id': 'https://example.org/building-blocks/odrl/constraint-atomic/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'additionalProperties': True,\n     'oneOf': [{'required': ['rightOperand']},\n               {'required': ['rightOperandReference']}],\n     'properties': {'dataType': {'type': 'string'},\n                    'leftOperand': {'type': 'string'},\n                    'operator': {'enum': ['eq',\n                                          'neq',\n                                          'gt',\n                                          'gteq',\n                                          'lt',\n                                          'lteq',\n                                          'isAnyOf',\n                                          'isAllOf',\n                                          'isNoneOf',\n                                          'gte',\n                                          'lte',\n                                          'isPartOf'],\n                                 'type': 'string'},\n                    'rightOperand': {},\n                    'rightOperandReference': {'type': 'string'},\n                    'unit': {'type': 'string'}},\n     'required': ['leftOperand', 'operator'],\n     'title': 'ODRL Atomic Constraint',\n     'type': 'object'}\n\nOn instance:\n    {'leftOperand': 'ex:purpose', 'operator': 'eq'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/constraint-atomic/tests/purpose-eq.json",
+        "url": "http://localhost:9090/register/_sources/odrl/constraint-atomic/tests/purpose-eq.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using purpose-eq.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/constraint-atomic/tests/unsupported-operator-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/constraint-atomic/tests/unsupported-operator-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using unsupported-operator-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'contains' is not one of ['eq', 'neq', 'gt', 'gteq', 'lt', 'lteq', 'isAnyOf', 'isAllOf', 'isNoneOf', 'gte', 'lte', 'isPartOf']",
+              "isError": true,
+              "message": "ValidationError: 'contains' is not one of ['eq', 'neq', 'gt', 'gteq', 'lt', 'lteq', 'isAnyOf', 'isAllOf', 'isNoneOf', 'gte', 'lte', 'isPartOf']\n\nFailed validating 'enum' in schema['properties']['operator']:\n    {'enum': ['eq',\n              'neq',\n              'gt',\n              'gteq',\n              'lt',\n              'lteq',\n              'isAnyOf',\n              'isAllOf',\n              'isNoneOf',\n              'gte',\n              'lte',\n              'isPartOf'],\n     'type': 'string'}\n\nOn instance['operator']:\n    'contains'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/constraint-atomic/tests/purpose-eq.json",
+        "url": "http://localhost:9090/register/_sources/odrl/constraint-atomic/tests/purpose-eq.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using purpose-eq.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/constraint-atomic/tests/missing-right-operand-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/constraint-atomic/tests/missing-right-operand-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-right-operand-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "{'leftOperand': 'ex:purpose', 'operator': 'eq'} is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: {'leftOperand': 'ex:purpose', 'operator': 'eq'} is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema:\n    {'$id': 'https://example.org/building-blocks/odrl/constraint-atomic/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'additionalProperties': True,\n     'oneOf': [{'required': ['rightOperand']},\n               {'required': ['rightOperandReference']}],\n     'properties': {'dataType': {'type': 'string'},\n                    'leftOperand': {'type': 'string'},\n                    'operator': {'enum': ['eq',\n                                          'neq',\n                                          'gt',\n                                          'gteq',\n                                          'lt',\n                                          'lteq',\n                                          'isAnyOf',\n                                          'isAllOf',\n                                          'isNoneOf',\n                                          'gte',\n                                          'lte',\n                                          'isPartOf'],\n                                 'type': 'string'},\n                    'rightOperand': {},\n                    'rightOperandReference': {'type': 'string'},\n                    'unit': {'type': 'string'}},\n     'required': ['leftOperand', 'operator'],\n     'title': 'ODRL Atomic Constraint',\n     'type': 'object'}\n\nOn instance:\n    {'leftOperand': 'ex:purpose', 'operator': 'eq'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/constraint-atomic/tests/unsupported-operator-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/constraint-atomic/tests/unsupported-operator-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using unsupported-operator-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'contains' is not one of ['eq', 'neq', 'gt', 'gteq', 'lt', 'lteq', 'isAnyOf', 'isAllOf', 'isNoneOf', 'gte', 'lte', 'isPartOf']",
+              "isError": true,
+              "message": "ValidationError: 'contains' is not one of ['eq', 'neq', 'gt', 'gteq', 'lt', 'lteq', 'isAnyOf', 'isAllOf', 'isNoneOf', 'gte', 'lte', 'isPartOf']\n\nFailed validating 'enum' in schema['properties']['operator']:\n    {'enum': ['eq',\n              'neq',\n              'gt',\n              'gteq',\n              'lt',\n              'lteq',\n              'isAnyOf',\n              'isAllOf',\n              'isNoneOf',\n              'gte',\n              'lte',\n              'isPartOf'],\n     'type': 'string'}\n\nOn instance['operator']:\n    'contains'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/constraint-atomic/example_1_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/constraint-atomic/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/purpose-eq.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0
+  }
+}

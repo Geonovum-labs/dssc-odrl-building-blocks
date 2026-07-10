@@ -1,0 +1,16 @@
+Validation report for nl.geonovum.dssc.odrl.location-privacy.patterns.ldp5-reduce-positional-accuracy - LDP5 Reduce Positional Accuracy
+Generated 2026-07-10T12:32:54.922321+00:00
+=== General ===
+
+** Validation error **
+Test was expected to fail but it did not.
+=== End General ===
+
+=== Files ===
+Using invalid-location-policy-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

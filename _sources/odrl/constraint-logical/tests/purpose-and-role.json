@@ -1,0 +1,14 @@
+{
+  "and": [
+    {
+      "leftOperand": "ex:purpose",
+      "operator": "eq",
+      "rightOperand": "ex:Research"
+    },
+    {
+      "leftOperand": "ex:recipientRole",
+      "operator": "eq",
+      "rightOperand": "ex:PublicAuthority"
+    }
+  ]
+}

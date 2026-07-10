@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/building-blocks/odrl/action-access/schema.json",
+  "title": "Dataspace Access Action",
+  "oneOf": [
+    {
+      "const": "access"
+    },
+    {
+      "type": "object",
+      "required": [
+        "@id"
+      ],
+      "properties": {
+        "@id": {
+          "const": "access"
+        }
+      },
+      "additionalProperties": true
+    }
+  ]
+}

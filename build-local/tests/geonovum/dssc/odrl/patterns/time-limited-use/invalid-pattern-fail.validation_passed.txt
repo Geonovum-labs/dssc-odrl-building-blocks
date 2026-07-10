@@ -1,0 +1,25 @@
+Validation report for nl.geonovum.dssc.odrl.patterns.time-limited-use - Time-Limited Use
+Generated 2026-07-10T12:32:55.075192+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using invalid-pattern-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: [] is too short
+
+Failed validating 'minItems' in schema[1]['properties']['and']:
+    {'items': {'oneOf': [{'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-atomic/schema.yaml'},
+                         {'$ref': 'http://localhost:9090/register/build-local/annotated/geonovum/dssc/odrl/constraint-logical/schema.yaml'}]},
+     'minItems': 1,
+     'type': 'array'}
+
+On instance['and']:
+    []
+=== End JSON Schema ===
+

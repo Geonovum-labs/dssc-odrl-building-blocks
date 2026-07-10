@@ -1,0 +1,12 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.org/building-blocks/odrl/location-privacy/action-aggregate/schema.json
+title: Location Privacy Aggregate Action
+oneOf:
+- const: lp:aggregate
+- type: object
+  required:
+  - '@id'
+  properties:
+    '@id':
+      const: lp:aggregate
+  additionalProperties: true

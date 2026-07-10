@@ -1,0 +1,213 @@
+{
+  "title": "Validation report for nl.geonovum.dssc.odrl.location-privacy.action-remove-location - Location Privacy Remove Location Action",
+  "bblockName": "Location Privacy Remove Location Action",
+  "bblockId": "nl.geonovum.dssc.odrl.location-privacy.action-remove-location",
+  "generated": "2026-07-10T12:32:54.331729+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/action-remove-location/tests/action.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/action-remove-location/tests/action.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using action.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/action-remove-location/tests/wrong-action-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/action-remove-location/tests/wrong-action-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using wrong-action-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'lp:wrongremoveLocation' is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: 'lp:wrongremoveLocation' is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema:\n    {'$id': 'https://example.org/building-blocks/odrl/location-privacy/action-remove-location/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'oneOf': [{'const': 'lp:removeLocation'},\n               {'additionalProperties': True,\n                'properties': {'@id': {'const': 'lp:removeLocation'}},\n                'required': ['@id'],\n                'type': 'object'}],\n     'title': 'Location Privacy Remove Location Action'}\n\nOn instance:\n    'lp:wrongremoveLocation'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/odrl/location-privacy/action-remove-location/tests/action.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/action-remove-location/tests/action.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using action.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/odrl/location-privacy/action-remove-location/tests/wrong-action-fail.json",
+        "url": "http://localhost:9090/register/_sources/odrl/location-privacy/action-remove-location/tests/wrong-action-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using wrong-action-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'lp:wrongremoveLocation' is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: 'lp:wrongremoveLocation' is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema:\n    {'$id': 'https://example.org/building-blocks/odrl/location-privacy/action-remove-location/schema.json',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'oneOf': [{'const': 'lp:removeLocation'},\n               {'additionalProperties': True,\n                'properties': {'@id': {'const': 'lp:removeLocation'}},\n                'required': ['@id'],\n                'type': 'object'}],\n     'title': 'Location Privacy Remove Location Action'}\n\nOn instance:\n    'lp:wrongremoveLocation'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build-local/tests/geonovum/dssc/odrl/location-privacy/action-remove-location/example_1_1.json",
+        "url": "http://localhost:9090/register/build-local/tests/geonovum/dssc/odrl/location-privacy/action-remove-location/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/action.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0
+  }
+}

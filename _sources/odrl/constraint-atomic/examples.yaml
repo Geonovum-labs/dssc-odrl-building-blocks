@@ -1,0 +1,7 @@
+examples:
+  - title: Atomic purpose constraint
+    description: >
+      Basic ODRL constraint using leftOperand, operator and rightOperand.
+    snippets:
+      - language: json
+        ref: examples/purpose-eq.json

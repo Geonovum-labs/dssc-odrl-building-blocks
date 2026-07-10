@@ -1,0 +1,7 @@
+examples:
+  - title: Dataspace Access Action
+    description: >
+      The access action pattern for access policies and offer visibility.
+    snippets:
+      - language: json
+        ref: examples/action.json
