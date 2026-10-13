@@ -15,7 +15,7 @@
       "action": "use",
       "constraint": [
         {
-          "leftOperand": "geofence:credentialSubject.geofence.URL",
+          "leftOperand": "geofence:missing",
           "operator": "neq",
           "rightOperand": null
         }
