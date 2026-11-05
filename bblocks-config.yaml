@@ -1,4 +1,4 @@
-identifier-prefix: nl.geonovum.dssc.
+identifier-prefix: nl.geonovum-labs.dssc.
 name: DSSC Dataspace ODRL Policy Building Blocks
 description: >
   Building blocks for ODRL-based access and usage policies as exchanged

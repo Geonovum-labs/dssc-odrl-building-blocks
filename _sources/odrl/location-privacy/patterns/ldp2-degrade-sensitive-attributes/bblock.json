@@ -2,12 +2,13 @@
   "name": "LDP2 Remove or Degrade Sensitive Attributes",
   "abstract": "Data-transfer policy retaining original spatial reference while removing or degrading selected sensitive attributes.",
   "status": "under-development",
+  "highlighted": true,
   "dateTimeAddition": "2026-07-10T00:00:00Z",
   "itemClass": "schema",
   "register": "DSSC Dataspace ODRL Policy Building Blocks",
   "version": "0.1.0",
   "dependsOn": [
-    "nl.geonovum.dssc.odrl.policy-set"
+    "nl.geonovum-labs.dssc.odrl.policy-set"
   ],
   "tags": [
     "ODRL",

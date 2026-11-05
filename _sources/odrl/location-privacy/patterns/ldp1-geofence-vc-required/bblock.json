@@ -2,12 +2,13 @@
   "name": "LDP1 Geofence Credential Required",
   "abstract": "Contract-negotiation policy requiring a participant geofence credential with URL and hash.",
   "status": "under-development",
+  "highlighted": true,
   "dateTimeAddition": "2026-07-10T00:00:00Z",
   "itemClass": "schema",
   "register": "DSSC Dataspace ODRL Policy Building Blocks",
   "version": "0.1.0",
   "dependsOn": [
-    "nl.geonovum.dssc.odrl.policy-set"
+    "nl.geonovum-labs.dssc.odrl.policy-set"
   ],
   "tags": [
     "ODRL",

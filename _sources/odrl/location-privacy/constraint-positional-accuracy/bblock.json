@@ -7,7 +7,7 @@
   "register": "DSSC Dataspace ODRL Policy Building Blocks",
   "version": "0.1.0",
   "dependsOn": [
-    "nl.geonovum.dssc.odrl.constraint-atomic"
+    "nl.geonovum-labs.dssc.odrl.constraint-atomic"
   ],
   "tags": [
     "ODRL",

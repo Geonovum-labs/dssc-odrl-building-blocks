@@ -2,12 +2,13 @@
   "name": "LDP3 Remove Spatial Reference",
   "abstract": "Data-transfer policy requiring removal of geometry or spatial reference before sharing attributes.",
   "status": "under-development",
+  "highlighted": true,
   "dateTimeAddition": "2026-07-10T00:00:00Z",
   "itemClass": "schema",
   "register": "DSSC Dataspace ODRL Policy Building Blocks",
   "version": "0.1.0",
   "dependsOn": [
-    "nl.geonovum.dssc.odrl.policy-set"
+    "nl.geonovum-labs.dssc.odrl.policy-set"
   ],
   "tags": [
     "ODRL",

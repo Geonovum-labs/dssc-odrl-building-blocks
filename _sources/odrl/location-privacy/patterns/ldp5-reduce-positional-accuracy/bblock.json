@@ -2,12 +2,13 @@
   "name": "LDP5 Reduce Positional Accuracy",
   "abstract": "Data-transfer policy requiring location data to be generalized to a defined minimum positional accuracy or resolution.",
   "status": "under-development",
+  "highlighted": true,
   "dateTimeAddition": "2026-07-10T00:00:00Z",
   "itemClass": "schema",
   "register": "DSSC Dataspace ODRL Policy Building Blocks",
   "version": "0.1.0",
   "dependsOn": [
-    "nl.geonovum.dssc.odrl.policy-set"
+    "nl.geonovum-labs.dssc.odrl.policy-set"
   ],
   "tags": [
     "ODRL",
